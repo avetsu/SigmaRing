@@ -8,7 +8,7 @@
   background-color: black;
   color: white;
   margin-top: -220px;
-  padding-bottom: 30px;
+  padding-bottom: 90px;
 }
 
 .Background {
@@ -117,6 +117,7 @@
     margin-top: 0px;
     justify-content: center;
     align-items: start;
+    padding-bottom: 30px;
   }
 
   .FirstScreenContentContainer {

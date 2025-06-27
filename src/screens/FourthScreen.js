@@ -5,7 +5,7 @@ import BESMARTdiag from "../photos/BESMARTdiag.png";
 function FourthScreen() {
   return (
     <div className="FourthScreen">
-      <video className="FourthScreenVideo" src={ringvid} autoPlay loop />
+      <video className="FourthScreenVideo" src={ringvid} loop autoPlay muted />
       <img
         className="FourthScreenImage"
         src={BESMARTdiag}

@@ -1,0 +1,93 @@
+.SixthScreen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 700px;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  font-family: "Suisse Intl", sans-serif;
+}
+
+.SixthScreenContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  width: 100%;
+  height: 800px;
+  margin: 0 19px;
+  background-color: black;
+}
+
+.SixthScreenText {
+  margin-right: -100px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.SixthScreenImages {
+  margin-top: -500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .SixthScreen {
+    margin-top: -1px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: relative;
+    padding-top: 5vh;
+  }
+  .SixthScreenContainer {
+    margin: 0 2vw;
+    justify-content: center;
+    height: auto;
+  }
+  .SixthScreenText {
+    margin-right: 0vw;
+    margin-left: 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-weight: 200;
+    margin-top: 7vh;
+    margin-left: 2vw;
+  }
+  .SixthScreenImages {
+    margin-top: -500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .DarkOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+}

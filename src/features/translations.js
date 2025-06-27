@@ -1,0 +1,123 @@
+export const translations = {
+  en: {
+    s2title: "Sigma Ring",
+    s2titlep2: "is a philosophy of balance",
+    s2body:
+      "We have created more than just a fitness ring.\nWe have created a tool for mindfulness, discipline, and self-respect.\n\nThe world constantly demands that we be fast, active, and productive.\n",
+    s2bodyp2:
+      "But the real strength is not in overload, but in balance.\nSIGMA RING doesn't just help you track your steps or pulse. It teaches you how to listen to your body, recognize signals and react wisely.",
+    s2bodyp3:
+      "Each step brings you closer not to the goal on the screen,\nbut to your true self.",
+
+    s2card1title: "Accuracy",
+    s2card1body:
+      "The sensors in the ring are located on the inside of the finger. Closer to the capillaries, there is more precision.",
+    s2card2title: "Convenience 24/7",
+    s2card2body:
+      "The ring does not interfere with sleeping, exercising, or taking a shower. Maximum comfort is the minimum size.",
+
+    s2card3title: "Charge",
+    s2card3body:
+      "Up to 7 days of battery life\nCharges in 60-80 minutes via a wireless dock",
+    s2card4title: "Status and minimalism",
+    s2card4body:
+      "There is no screen. There are no notifications. There is no visual noise.\nThe ring is a part of you.",
+    s3title: "Small ring",
+    s3subtitle: "Great opportunities.",
+    s3benefit1: "Non-invasive Blood Glucose Risk Assesment",
+    s3benefit2: "VO2",
+    s3benefit3: "Sleep Tracking",
+    s3benefit4: "24/7 Heart Rate Monitor",
+    s3benefit5: "SpO2",
+    s3benefit6: "Skin Temperature Trend",
+    s3benefit7: "HRV",
+    s3benefit8: "Stress",
+    s3benefit9: "Women Health",
+    s3benefit10: "Activity Tracking",
+    s3benefit11: "5ATM",
+    s3benefit12: "Up to 7 working days",
+    s3benefit13: "Premium materials",
+    s3benefit14: "AI analytics",
+    s3benefit15: "Sigma Health App",
+    s3greensmall:
+      "While the smartwatch is trying to attract attention with the screen,",
+    s3greenlarge: "the ring is\nworking!",
+    s5purple: "Limited Price",
+    s5subtitle: "Limited Quantity",
+    s5priceinfo:
+      "When Purchasing with DEXNET Tokens - $380\nWhen Purchasing with DEXNET Tokens - $380",
+    s5promocard1: "VIP price for pre-order",
+    s5promocard2: "1 year free subscription",
+    s5promocard3: "Priority service-1 year warranty",
+    s5promocard4: "1 year of free data storage in DEXCLOUD",
+    s5promocard5: "DexCards cryptographic card as a gift",
+    s6top: "CREATED",
+    s6white: "for",
+    s6green: "those",
+    s6bottom: "who choose mindfulness and style",
+    s7title: "FAQ",
+    s7q1: "What is the minimum transfer amount?",
+    s7q2: "Do you work with individuals?",
+    s7q3: "Is a contract required?",
+    s7q4: "What are the fees?",
+  },
+  ru: {
+    s2title: "Sigma Ring",
+    s2titlep2: "- это философия баланса",
+    s2body:
+      "Мы создали не просто фитнес-кольцо.\nМы создали инструмент осознанности, дисциплины и уважения к себе.\n\nМир постоянно требует от нас быть быстрыми, активными, продуктивными.\n",
+    s2bodyp2:
+      "Но настоящая сила — не в перегрузке, а в равновесии.\nSIGMA RING помогает не просто отслеживать шаги или пульс.<br/>Оно учит слышать своё тело, распознавать сигналы и реагировать мудро.",
+    s2bodyp3: "Каждый шаг приближает не к цели на экране, а к себе настоящему.",
+
+    s2card1title: "Точность",
+    s2card1body:
+      "Датчики в кольце расположены на внутренней стороне пальца. Ближе к капиллярам-больше точность.",
+    s2card2title: "Удобство 24/7",
+    s2card2body:
+      "Кольцо не мешает спать, тренироваться, принимать душ. Максимальный комфорт-минимальный размер.",
+
+    s2card3title: "Заряд",
+    s2card3body:
+      "До 7 дней автономной работы Заряжается за 60–80 минут через беспроводную док-станцию",
+    s2card4title: "Статус и минимализм",
+    s2card4body:
+      "Нет экрана. Нет уведомлений.\nНет визуального шума.\nКольцо -часть тебя. ",
+    s3title: "Маленькое кольцо.",
+    s3subtitle: "Большие возможности.",
+    s3benefit1: "Non-invasive Blood Glucose Risk Assesment",
+    s3benefit2: "VO2",
+    s3benefit3: "Sleep Tracking",
+    s3benefit4: "24/7 Heart Rate Monitor",
+    s3benefit5: "SpO2",
+    s3benefit6: "Skin Temperature Trend",
+    s3benefit7: "HRV",
+    s3benefit8: "Stress",
+    s3benefit9: "Women Health",
+    s3benefit10: "Activity Tracking",
+    s3benefit11: "5ATM",
+    s3benefit12: "До 7 дней работы ",
+    s3benefit13: "Премиальные материалы ",
+    s3benefit14: "AI-аналитика",
+    s3benefit15: "Приложение Sigma Health",
+    s3greensmall: "Пока умные часы пытаются привлечь внимание экраном",
+    s3greenlarge: "кольцо \nдействует!",
+    s5purple: "Лимитированная цена",
+    s5subtitle: "Количество ограниченно!",
+    s5priceinfo: "При покупке токенами DEXNET - $380",
+    s5promocard1: "VIP цена на предзаказ",
+    s5promocard2: "1 год бесплатной подписки",
+    s5promocard3: "Приоритетное обслуживание - 1 год гарантии",
+    s5promocard4: "1 год бесплатного хранения данных в дексклауд",
+    s5promocard5: "Криптокарта декскардс в подарок",
+    s6top: "Создано",
+    s6white: "для",
+    s6green: "тех",
+    s6bottom: "кто выбирает осознанность и стиль",
+    s7title: "Вопросы и ответы",
+    s7q1: "Минимальная сумма перевода?",
+    s7q2: "Работаете ли с физлицами?",
+    s7q3: "Нужен ли договор?",
+    s7q4: "Какие комиссии?",
+  },
+};

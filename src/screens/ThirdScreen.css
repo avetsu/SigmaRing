@@ -1,0 +1,113 @@
+.ThirdScreen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  font-family: "Suisse Intl", sans-serif;
+}
+
+.BenefitsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  height: 100%;
+}
+
+.BenefitsTitle {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.BenefitsSubtitle {
+  margin-top: -20px;
+  font-size: 30px;
+  font-weight: 275;
+}
+
+.Benefits {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 275;
+}
+
+.SecondColumn {
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+}
+
+.RingBoxContainer {
+  position: relative;
+  margin-right: 19px;
+  margin-left: 170px;
+  color: black;
+  font-weight: 700;
+}
+
+.RingBoxImage {
+  width: 914px;
+}
+
+.RingBoxText {
+  position: absolute;
+  top: 111px;
+  left: 91px;
+  font-size: 18.46px;
+  font-weight: 700px;
+  width: 300px;
+}
+
+.Large {
+  top: 100px;
+  left: 420px;
+  font-size: 70.85px;
+  line-height: 70.85px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .ThirdScreen {
+    flex-direction: column;
+    margin-top: -1px;
+  }
+  .BenefitsContainer {
+    margin: 5vw;
+  }
+  .BenefitsTitle {
+    font-size: 30px;
+  }
+  .BenefitsSubtitle {
+    font-size: 15px;
+    margin-top: -1vh;
+  }
+  .Benefits {
+    font-size: 12px;
+  }
+  .SecondColumn {
+    margin-left: 20vw;
+    margin-right: 15vw;
+  }
+  .RingBoxContainer {
+    margin: 0 2vw;
+  }
+  .RingBoxText {
+    font-size: 7px;
+    width: 30vw;
+    left: 10vw;
+    top: 5vh;
+  }
+  .Large {
+    font-size: 27px;
+    left: 45vw;
+    top: 5vh;
+    line-height: 24px;
+    width: 40vw;
+  }
+  .RingBoxImage {
+    width: 94vw;
+  }
+}

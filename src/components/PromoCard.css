@@ -1,0 +1,31 @@
+.PromoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 167px;
+  height: 220px;
+  background-color: white;
+  border-radius: 40px;
+  font-family: "Suisse Intl", sans-serif;
+  margin-right: 20px;
+}
+
+.PromoCardImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.PromoCardText {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15.78px;
+  font-weight: 300;
+  width: 100px;
+  white-space: pre-line;
+  text-align: center;
+}

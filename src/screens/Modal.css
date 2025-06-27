@@ -1,0 +1,155 @@
+.Backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  font-family: "Suisse Intl", sans-serif;
+  color: white;
+}
+
+.CloseIcon:hover {
+  color: #757575;
+}
+
+.ModalImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ModalTitle {
+  font-size: 35px;
+  font-weight: 700;
+  position: absolute;
+  top: 19%;
+  left: 50%;
+  transform: translate(-50%, -19%);
+  font-family: "Lexend", sans-serif;
+}
+.ModalClose {
+  font-size: 35px;
+  font-weight: 700;
+  position: absolute;
+  top: 21%;
+  left: 76%;
+  transform: translate(-76%, -21%);
+  font-family: "Lexend", sans-serif;
+}
+
+.RingImg {
+  width: 514px;
+  position: absolute;
+  top: 60%;
+  left: 27%;
+  transform: translate(-27%, -60%);
+}
+
+.ModalContent {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 55%;
+  left: 68%;
+  transform: translate(-68%, -55%);
+  width: 25%;
+}
+
+.Name {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.Input {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding-left: 20px;
+  width: 90%;
+  border: 1px solid #ffffff1a;
+  border-radius: 20px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 4px 4px #00000040;
+  margin-bottom: 30px;
+}
+
+.Number {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .ModalImg {
+    width: 94vw;
+  }
+  .ModalTitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 2vh;
+
+    top: 38.5%;
+    left: 50%;
+    transform: translate(-50%, -38.5%);
+  }
+  .ModalClose {
+    top: 39.5%;
+    left: 93%;
+    transform: translate(-93%, -39.5%);
+  }
+  .RingImg {
+    width: 45vw;
+    position: absolute;
+    top: 52%;
+    left: 4%;
+    transform: translate(-4%, -52%);
+  }
+  .Input {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding-left: 2vw;
+    width: 90%;
+    border: 1px solid #ffffff1a;
+    border-radius: 20px;
+    height: 2vh;
+    color: white;
+    font-size: 8px;
+    font-weight: 400;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 4px 4px #00000040;
+    margin-bottom: 2vh;
+  }
+
+  .Name {
+    display: flex;
+    flex-direction: column;
+    font-size: 7px;
+    font-weight: 300;
+    margin-bottom: 0.2vh;
+  }
+  .Number {
+    font-size: 7px;
+    font-weight: 400;
+    margin: 0 2px;
+  }
+
+  .ModalContent {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 52%;
+    left: 70%;
+    transform: translate(-70%, -52%);
+    width: 25%;
+  }
+}

@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../public/fonts/suisse-intl-regular.woff") format("woff"),
+    url("../public/fonts/suisse-intl-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../public/fonts/suisse-intl-light.woff") format("woff"),
+    url("../public/fonts/suisse-intl-light.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../public/fonts/suisse-intl-bold.woff") format("woff"),
+    url("../public/fonts/suisse-intl-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.App {
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Lexend", sans-serif;
+  height: 100vh;
+  white-space: pre-line;
+}

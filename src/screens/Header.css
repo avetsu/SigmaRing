@@ -1,0 +1,117 @@
+.App-header {
+  padding: 10px;
+  padding-top: 20px;
+  background-color: black;
+  min-height: 5vh;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 9;
+  font-family: "Lexend", sans-serif;
+}
+.Hamburger {
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  z-index: 9;
+  margin-left: 15px;
+}
+
+.Hamburger-line {
+  width: 42px;
+  height: 7px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background: #d9d9d9;
+}
+
+.App-logo {
+  z-index: 9;
+  height: 37.78px;
+}
+
+.left,
+.center,
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.MobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  max-width: 15vw;
+  background-color: #0007;
+  color: white;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px;
+  transition: left 0.3s ease;
+}
+
+.MobileMenu.open {
+  left: 0;
+}
+
+.MobileMenu a {
+  text-decoration: none;
+  color: white;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.active {
+  font-family: "Lexend", sans-serif;
+  background-color: #c1ef00;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  height: 40px;
+  width: 80px;
+  border-radius: 40px;
+  border: solid 1px #475704;
+  margin-bottom: 20px;
+}
+
+.inactive {
+  font-family: "Lexend", sans-serif;
+  background-color: #777a6c;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  height: 40px;
+  width: 80px;
+  border-radius: 40px;
+  border: solid 1px #3f3f3f;
+  margin-bottom: 20px;
+}
+
+.inactive:hover {
+  background-color: #333333;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}

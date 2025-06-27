@@ -1,0 +1,40 @@
+.Slider {
+  margin: 10px;
+  background-color: #c1ef00;
+  height: 55px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  z-index: 9;
+}
+
+.Slider:hover {
+  background-color: #6d8802;
+}
+
+.purple {
+  color: white;
+  background-color: #8a0dff;
+  margin-left: 0px;
+}
+
+.purple:hover {
+  background-color: #510995;
+}
+
+.ArrowIcon {
+  background-color: white;
+  width: 47px;
+  height: 47px;
+  border-radius: 100%;
+  margin-right: 4px;
+}
+
+.SliderValue {
+  padding-left: 40px;
+  padding-right: 30px;
+}

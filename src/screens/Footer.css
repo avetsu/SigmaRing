@@ -1,0 +1,38 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 150px;
+  width: 100%;
+  background-color: #131313;
+  color: white;
+  font-family: "Lexend", sans-serif;
+}
+
+.FooterText {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.FooterLogo {
+  width: 145px;
+}
+
+@media (max-width: 768px) {
+  .Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+    height: 12vh;
+  }
+  .FooterText {
+    font-size: 10px;
+  }
+  .FooterLogo {
+    width: 25vw;
+    margin-bottom: 2vh;
+  }
+}

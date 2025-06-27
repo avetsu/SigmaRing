@@ -1,0 +1,37 @@
+.FourthScreen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 500px;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  font-family: "Suisse Intl", sans-serif;
+}
+
+.FourthScreenVideo {
+  height: 497px;
+  border-radius: 15px;
+}
+
+.FourthScreenImage {
+  height: 497px;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .FourthScreen {
+    flex-direction: column;
+    margin-top: -1px;
+  }
+  .FourthScreenVideo {
+    width: 94vw;
+    height: auto;
+  }
+  .FourthScreenImage {
+    margin-top: -2vh;
+    width: 94vw;
+    height: auto;
+  }
+}

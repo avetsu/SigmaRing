@@ -6,25 +6,29 @@
   justify-content: center;
   flex: 1;
   width: 100%;
+  height: 54.5vw;
   color: white;
   font-family: "Suisse Intl", sans-serif;
-  padding-bottom: 40px;
+  padding: 40px 0;
+  margin-top: -1px;
 }
 
 .PrimaryContainer {
   display: flex;
+  flex: 1;
   width: 100%;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: start;
+  justify-content: center;
   position: relative;
 }
 
 .SecondScreenImages {
-  margin-top: -500px;
+  width: 10vw;
   display: flex;
+  flex: 1;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   position: relative;
   background-color: black;
@@ -39,15 +43,15 @@
 
 .CircleStack {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  margin-top: 5vh;
+  width: 25vw;
+  height: 25vw;
 }
 
 .FlatRing {
   top: 50%;
   left: 50%;
-  width: 75px;
+  width: 4vw;
+
   position: absolute;
   z-index: 3;
   mix-blend-mode: multiply;
@@ -56,8 +60,8 @@
 .GlowingCircle {
   top: 50%;
   left: 50%;
-  height: 72px;
-  width: 72px;
+  height: 3.75vw;
+  width: 3.75vw;
   position: absolute;
   z-index: 3;
   border-radius: 50%;
@@ -68,21 +72,21 @@
 .Circle1 {
   top: 50%;
   left: 50%;
-  width: 129px;
-  height: 129px;
-  opacity: 0.3;
+  width: 7vw;
+  height: 7vw;
+  opacity: 0.44;
   border-width: 1px;
   position: absolute;
   z-index: 1;
   border-radius: 50%;
   border-color: white;
   border-style: solid;
+
   background: radial-gradient(
     circle,
     #c1ef00 0%,
-    #c1ef00 8%,
-    #c1ef003b 20%,
-    #c1ef0007 60%,
+    #c1ef00 40%,
+    #c1ef0007 70%,
     transparent 100%
   );
 }
@@ -90,9 +94,9 @@
 .CircleAnim2 {
   top: 50%;
   left: 50%;
-  width: 211px;
-  height: 211px;
-  opacity: 0.3;
+  width: 11vw;
+  height: 11vw;
+  opacity: 0.38;
   border-width: 1px;
   position: absolute;
   z-index: 1;
@@ -106,9 +110,9 @@
 .CircleAnim3 {
   top: 50%;
   left: 50%;
-  width: 299px;
-  height: 299px;
-  opacity: 0.3;
+  width: 15vw;
+  height: 15vw;
+  opacity: 0.32;
   border-width: 1px;
   position: absolute;
   z-index: 1;
@@ -122,9 +126,9 @@
 .CircleAnim4 {
   top: 50%;
   left: 50%;
-  width: 393px;
-  height: 393px;
-  opacity: 0.3;
+  width: 19vw;
+  height: 19vw;
+  opacity: 0.26;
   border-width: 1px;
   position: absolute;
   z-index: 1;
@@ -138,9 +142,9 @@
 .Circle5 {
   top: 50%;
   left: 50%;
-  width: 493px;
-  height: 493px;
-  opacity: 0.3;
+  width: 23vw;
+  height: 23vw;
+  opacity: 0.2;
   border-width: 1px;
   position: absolute;
   z-index: 1;
@@ -155,34 +159,41 @@
     #c1ef0007 60%,
     transparent 100%
   );
+  background: radial-gradient(
+    circle,
+    #c1ef00 0%,
+    #c1ef00 8%,
+    #bfef008c 30%,
+    #c1ef0007 70%,
+    transparent 100%
+  );
 }
 
 .HandLayers {
   position: absolute;
   z-index: 4;
   display: flex;
-  top: 50%;
-  transform: translate(-20px, 530px);
+  flex: 1;
+  left: 18vw;
+  top: 9.5vw;
 }
 
 .SuperposedImage {
   position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
 }
 
 .HandImage {
-  margin-left: 30px;
-  height: 596px;
+  margin-left: 1.5vw;
+  height: 31vw;
   position: absolute;
   z-index: 4;
 }
 
 .HandOverlay {
-  margin-bottom: -10px;
-  height: 374px;
-  width: 340px;
+  top: 12vw;
+  margin-bottom: -0.5vw;
+  height: 19vw;
+  width: 17vw;
   position: absolute;
   z-index: 5;
   background: linear-gradient(
@@ -195,44 +206,48 @@
 .MobileText {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: start;
+  justify-content: start;
   text-align: start;
-  margin-top: -130vh;
-  margin-bottom: 30vh;
-  width: 94vw;
+  margin: 0 25px;
 }
 
 .SecondScreenText {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   text-align: start;
-  width: 650px;
-  margin-top: -100px;
-  margin-right: -100px;
+  height: 100%;
 }
 
 .Title {
   font-weight: 400;
-  font-size: 50px;
+  font-size: 2.5vw;
+  max-width: 32vw;
 }
 
 .Subtitle {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 1.5vw;
+  margin-bottom: 1.5vw;
   font-weight: 250;
-  font-size: 20px;
+  font-size: 1vw;
+}
+
+.SecondaryContainer {
+  width: 100%;
 }
 
 .CardContainer {
-  padding-top: 100px;
   display: flex;
+  flex: 1;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  position: relative;
+  z-index: 4;
 }
 
 .keen-slider {
@@ -266,16 +281,44 @@
 
 @media (max-width: 768px) {
   .SecondScreen {
+    min-height: 280vw;
     margin-top: -1px;
   }
+
   .PrimaryContainer {
     flex-direction: column;
-    margin-top: 90vh;
-    width: 50vw;
+    align-items: center;
+    height: 130vw;
   }
+
+  .Title {
+    font-size: 7vw;
+    max-width: calc(100vw - 50px);
+    margin-bottom: 5vw;
+  }
+  .Subtitle {
+    font-size: 3vw;
+    max-width: calc(100vw - 50px);
+  }
+  .SecondScreenImages {
+    width: 100%;
+    padding-bottom: 100vw;
+  }
+
   .CircleStack {
-    width: 50vw;
+    width: 80vw;
+    height: 80vw;
   }
+
+  .FlatRing {
+    width: 15vw;
+  }
+
+  .GlowingCircle {
+    width: 14vw;
+    height: 14vw;
+  }
+
   .Circle1 {
     width: 25vw;
     height: 25vw;
@@ -297,18 +340,43 @@
     height: 65vw;
   }
   .HandImage {
-    height: 50vh;
+    height: 80vw;
   }
   .HandLayers {
-    margin-top: -9vh;
+    top: 33vw;
+    left: 34vw;
   }
+  .HandOverlay {
+    top: 30vw;
+    height: 50vw;
+    width: 40vw;
+  }
+
+  .SecondaryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  /* .SecondScreen {
+    margin-top: -1px;
+  }
+  .PrimaryContainer {
+    flex-direction: column;
+    margin-top: 90vh;
+    width: 50vw;
+  }
+  
   .Title {
     font-size: 25px;
     font-weight: 300;
   }
   .Subtitle {
     font-size: 11px;
-  }
+  } */
 }
 
 @keyframes borderGrow1 {

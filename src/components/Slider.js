@@ -10,7 +10,7 @@ function Slider({ value, styles, stylesvalue, purple, className, stylesicon }) {
     <div
       className={`Slider ${purple} ${className || ""}`}
       style={styles}
-      onClick={() => dispatch(openModal())} // ← ouvre la modale
+      onClick={() => dispatch(openModal())}
     >
       <span className="SliderValue" style={stylesvalue}>
         {value}

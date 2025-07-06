@@ -29,6 +29,11 @@
   background: #d9d9d9;
 }
 
+.Hamburger:hover .Hamburger-line {
+  background: #909090;
+  cursor: pointer;
+}
+
 .App-logo {
   z-index: 9;
   height: 37.78px;
@@ -89,7 +94,7 @@
   height: 40px;
   width: 80px;
   border-radius: 40px;
-  border: solid 1px #475704;
+  border: solid 1px rgb(47, 58, 2);
   margin-bottom: 20px;
 }
 
@@ -102,12 +107,13 @@
   height: 40px;
   width: 80px;
   border-radius: 40px;
-  border: solid 1px #3f3f3f;
+  border: solid 1px rgb(47, 58, 2);
   margin-bottom: 20px;
 }
 
 .inactive:hover {
-  background-color: #333333;
+  background-color: #7f7f7f;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

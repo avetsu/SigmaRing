@@ -13,7 +13,10 @@ function ThirdScreen() {
           {t.s3benefit1}
         </div>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          <div
+            className="FirstColumn"
+            style={{ display: "flex", flexDirection: "column" }}
+          >
             <div className="Benefits">{t.s3benefit2}</div>
             <div className="Benefits">{t.s3benefit3}</div>
             <div className="Benefits">{t.s3benefit4}</div>

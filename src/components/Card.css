@@ -1,27 +1,28 @@
 .Card {
-  width: 440px;
-  height: 261px;
-  border-radius: 40px;
+  width: 23vw;
+  height: 14vw;
+  border-radius: 2vw;
   color: black;
 }
 
 .CardTitle {
-  margin-left: 40px;
-  margin-top: 30px;
-  font-size: 22px;
+  margin-left: 2vw;
+  margin-top: 15px;
+  font-size: 1.1vw;
   font-weight: 600;
 }
 
 .CardContent {
-  margin-left: 40px;
-  margin-top: 10px;
-  font-size: 18px;
-  max-width: 363px;
+  margin-left: 2vw;
+  margin-top: 0.5vw;
+  font-size: 1vw;
+  max-width: 21vw;
   font-weight: 300;
   white-space: pre-line;
 }
 
 .CardIcon {
-  margin-left: 40px;
-  margin-top: 30px;
+  margin-left: 2vw;
+  margin-top: 1.5vw;
+  width: 3vw;
 }

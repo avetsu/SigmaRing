@@ -3,35 +3,38 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 500px;
+  height: 26vw;
   width: 100%;
   background-color: #000000;
   color: white;
   font-family: "Suisse Intl", sans-serif;
+  margin-top: -1px;
 }
 
 .FourthScreenVideo {
-  height: 497px;
-  border-radius: 15px;
+  height: 25vw;
+  border-radius: 1vw;
 }
 
 .FourthScreenImage {
-  height: 497px;
-  border-radius: 15px;
+  height: 25vw;
+  border-radius: 1vw;
 }
 
 @media (max-width: 768px) {
   .FourthScreen {
     flex-direction: column;
     margin-top: -1px;
+    height: 112vw;
   }
   .FourthScreenVideo {
-    width: 94vw;
+    border-radius: 4vw;
+    width: calc(100vw - 40px);
     height: auto;
   }
   .FourthScreenImage {
-    margin-top: -2vh;
-    width: 94vw;
+    border-radius: 4vw;
+    width: calc(100vw - 40px);
     height: auto;
   }
 }

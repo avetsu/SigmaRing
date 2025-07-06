@@ -2,7 +2,7 @@
   margin: 10px;
   background-color: #c1ef00;
   height: 55px;
-  border-radius: 30px;
+  border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,6 +14,7 @@
 
 .Slider:hover {
   background-color: #6d8802;
+  cursor: pointer;
 }
 
 .purple {

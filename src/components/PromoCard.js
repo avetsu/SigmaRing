@@ -4,7 +4,12 @@ function PromoCard(props) {
   return (
     <div className="PromoCard" style={props.styles}>
       <div className="PromoCardImage">
-        <img src={props.image} alt={props.title} style={props.stylesimage} />
+        <img
+          className="PromoCardImgTag"
+          src={props.image}
+          alt={props.title}
+          style={props.stylesimage}
+        />
       </div>
       <div className="PromoCardText" style={props.stylestext}>
         {props.text}

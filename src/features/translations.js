@@ -5,7 +5,7 @@ export const translations = {
     s2body:
       "We have created more than just a fitness ring.\nWe have created a tool for mindfulness, discipline, and self-respect.\n\nThe world constantly demands that we be fast, active, and productive.\n",
     s2bodyp2:
-      "But the real strength is not in overload, but in balance.\nSIGMA RING doesn't just help you track your steps or pulse. It teaches you how to listen to your body, recognize signals and react wisely.",
+      "But the real strength is not in overload, but in balance.\nSIGMA RING doesn't just help you track your steps or pulse.\nIt teaches you how to listen to your body, recognize signals and react wisely.",
     s2bodyp3:
       "Each step brings you closer not to the goal on the screen,\nbut to your true self.",
 
@@ -14,7 +14,7 @@ export const translations = {
       "The sensors in the ring are located on the inside of the finger. Closer to the capillaries, there is more precision.",
     s2card2title: "Convenience 24/7",
     s2card2body:
-      "The ring does not interfere with sleeping, exercising, or taking a shower. Maximum comfort is the minimum size.",
+      "The ring does not interfere with sleeping, exercising, or taking a shower. Maximum comfort at the minimum size.",
 
     s2card3title: "Charge",
     s2card3body:
@@ -41,18 +41,17 @@ export const translations = {
     s3benefit15: "Sigma Health App",
     s3greensmall:
       "While the smartwatch is trying to attract attention with the screen,",
-    s3greenlarge: "the ring is\nworking!",
+    s3greenlarge: "the ring\nis working!",
     s5purple: "Limited Price",
     s5subtitle: "Limited Quantity",
-    s5priceinfo:
-      "When Purchasing with DEXNET Tokens - $380\nWhen Purchasing with DEXNET Tokens - $380",
+    s5priceinfo: "When Purchasing with DEXNET Tokens - $380",
     s5promocard1: "VIP price for pre-order",
     s5promocard2: "1 year free subscription",
     s5promocard3: "Priority service-1 year warranty",
     s5promocard4: "1 year of free data storage in DEXCLOUD",
     s5promocard5: "DexCards cryptographic card as a gift",
     s6top: "CREATED",
-    s6white: "for",
+    s6white: "for ",
     s6green: "those",
     s6bottom: "who choose mindfulness and style",
     s7title: "FAQ",
@@ -111,7 +110,7 @@ export const translations = {
     s5promocard4: "1 год бесплатного хранения данных в дексклауд",
     s5promocard5: "Криптокарта декскардс в подарок",
     s6top: "Создано",
-    s6white: "для",
+    s6white: "для ",
     s6green: "тех",
     s6bottom: "кто выбирает осознанность и стиль",
     s7title: "Вопросы и ответы",

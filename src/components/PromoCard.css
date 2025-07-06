@@ -3,12 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 167px;
-  height: 220px;
+  width: 9vw;
+  height: 11;
   background-color: white;
-  border-radius: 40px;
+  border-radius: 2vw;
   font-family: "Suisse Intl", sans-serif;
-  margin-right: 20px;
+  margin-right: 1vw;
 }
 
 .PromoCardImage {
@@ -16,16 +16,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 1vw;
+}
+.PromoCardImgTag {
+  height: 5.5vw;
 }
 .PromoCardText {
-  margin: 15px 0;
+  margin: 0.7vw 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 15.78px;
+  font-size: 0.7vw;
   font-weight: 300;
-  width: 100px;
+  width: 5vw;
   white-space: pre-line;
   text-align: center;
 }

@@ -4,6 +4,7 @@ import { setLanguage } from "../features/languageSlice";
 import Slider from "../components/Slider";
 import logo from "../photos/logo.png";
 import { RxCross2 } from "react-icons/rx";
+import { CircleFlag } from "react-circle-flags";
 import "./Header.css";
 
 const Hamburger = ({ onClick, isOpen }) => (
@@ -19,7 +20,7 @@ const Hamburger = ({ onClick, isOpen }) => (
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const lang = useSelector((s) => s.language.current); // ⬅️ read from Redux
+  const lang = useSelector((s) => s.language.current);
   const dispatch = useDispatch();
 
   const changeLang = (l) => {
@@ -42,12 +43,17 @@ export default function Header() {
           <Slider
             value="Buy Ring"
             className="hide-on-mobile"
-            styles={{ marginTop: "0px" }}
+            styles={{ marginTop: "0px", height: "4vw", width: "16vw" }}
+            stylesvalue={{
+              paddingLeft: "3.5vw",
+              paddingRight: "0vw",
+              fontSize: "1.5vw",
+            }}
+            stylesicon={{ width: "3vw", height: "3vw", marginRight: "0.5vw" }}
           />
         </div>
       </header>
 
-      {/* mobile dropdown */}
       <nav className={`MobileMenu ${menuOpen ? "open" : ""}`}>
         <RxCross2
           size={32}
@@ -63,13 +69,29 @@ export default function Header() {
         <button
           className={lang === "en" ? "active" : "inactive"}
           onClick={() => changeLang("en")}
+          style={{
+            minWidth: "7vw",
+            minHeight: "4vw",
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
         >
+          <CircleFlag countryCode="uk" height={"30vw"} />
           EN
         </button>
         <button
           className={lang === "ru" ? "active" : "inactive"}
           onClick={() => changeLang("ru")}
+          style={{
+            minWidth: "7vw",
+            minHeight: "4vw",
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
         >
+          <CircleFlag countryCode="ru" height={"30vw"} />
           RU
         </button>
       </nav>

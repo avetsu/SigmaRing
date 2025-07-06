@@ -201,11 +201,14 @@
     position: relative;
     margin-top: 5vw;
     margin-left: 5vw;
+    animation: floatYRingMobile 4s ease-in-out infinite;
   }
 
   .shadow {
+    top: 16.5vw;
     width: 90vw;
     margin-top: -24vw;
+    animation: floatYShadow 4s ease-in-out infinite;
   }
   /*
   .Background {
@@ -263,6 +266,33 @@
   }
   50% {
     transform: translateY(1.5vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatYShadowMobile {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-4.5vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+}
+
+@keyframes floatYRingMobile {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4.5vw);
   }
   100% {
     transform: translateY(0);

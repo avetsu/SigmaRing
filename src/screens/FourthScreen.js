@@ -27,7 +27,7 @@ function FourthScreen() {
       {w > 768 ? (
         <video
           className="FourthScreenVideo"
-          src={ringvid}
+          src={ringvidmobile}
           loop
           autoPlay
           muted

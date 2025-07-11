@@ -1,6 +1,5 @@
 .App-header {
-  padding: 10px;
-  padding-top: 20px;
+  padding: 20px 10px;
   background-color: black;
   min-height: 5vh;
   display: flex;
@@ -16,27 +15,42 @@
 .Hamburger {
   display: flex;
   flex-direction: column;
-  height: 30px;
+  height: 3vw;
   z-index: 9;
   margin-left: 15px;
+  justify-content: center;
 }
 
 .Hamburger-line {
-  width: 42px;
-  height: 7px;
-  margin-top: 5px;
+  width: 2.9vw;
+  height: 0.5vw;
+  margin-top: 0.6vw;
   border-radius: 10px;
   background: #d9d9d9;
+}
+.Line2 {
+  width: 2vw;
+}
+.Cross {
+  color: #ffffff;
+  transition: color 0.5s ease;
+}
+.Cross:hover {
+  color: #909090;
+  cursor: pointer;
+}
+
+.Hamburger:hover {
+  cursor: pointer;
 }
 
 .Hamburger:hover .Hamburger-line {
   background: #909090;
-  cursor: pointer;
 }
 
 .App-logo {
   z-index: 9;
-  height: 37.78px;
+  height: 2.5vw;
 }
 
 .left,
@@ -119,5 +133,19 @@
 @media (max-width: 768px) {
   .hide-on-mobile {
     display: none;
+  }
+  .App-logo {
+    height: 10vw;
+  }
+  .Hamburger {
+    height: 8vw;
+  }
+  .Hamburger-line {
+    height: 1.5vw;
+    width: 8vw;
+    margin-top: 1.5vw;
+  }
+  .Line2 {
+    width: 5.5vw;
   }
 }

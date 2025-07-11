@@ -52,7 +52,7 @@ function FifthScreen() {
           )}
           <div
             className="Quantity"
-            style={{ marginTop: lang === "ru" ? "-20vw" : "" }}
+            style={{ marginTop: lang === "ru" && w <= 768 ? "-20vw" : "" }}
           >
             {t.s5subtitle}
           </div>

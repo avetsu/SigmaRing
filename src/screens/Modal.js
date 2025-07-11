@@ -1,8 +1,10 @@
 import "./Modal.css";
 import ModalImg from "../photos/Modal.png";
+import ModalImgMobile from "../photos/ModalMobile.png";
 import RingShadow from "../photos/RingShadow.png";
+import RingShadowMobile from "../photos/RingShadowMobile.png";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import { RxCross2, RxHeight } from "react-icons/rx";
+import { RxCross2 } from "react-icons/rx";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { closeModal } from "../features/modalSlice";
@@ -26,7 +28,7 @@ function useWindowSize() {
 
 const TInput = (props) => {
   return (
-    <div className="InputTitle">
+    <div className="InputTitle" style={props.stylediv}>
       <div className="Name">{props.name}</div>
       <input
         type="text"
@@ -46,7 +48,8 @@ function Modal() {
   const [value, setValue] = useState(15);
 
   const decrease = () => setValue((v) => Math.max(0.5, v - 0.5));
-  const increase = () => setValue((v) => Math.min(100, v + 0.5));
+  const increase = () => setValue((v) => Math.min(99.5, v + 0.5));
+  const selectValue = (n) => setValue((v) => v + n);
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -60,22 +63,25 @@ function Modal() {
   return (
     <div className="Backdrop" onClick={() => dispatch(closeModal())}>
       <div className="Modal" onClick={(e) => e.stopPropagation()}>
-        <img src={ModalImg} alt="Modal" className="ModalImg" />
-        <img src={RingShadow} alt="Ring Shadow" className="RingImg" />
-        <div className="ModalTitle">BUY RING</div>
-        <div className="ModalClose" onClick={() => dispatch(closeModal())}>
-          <RxCross2 className="CloseIcon" size={w > 768 ? "2.5vw" : "5vw"} />
-        </div>
-        <div className="ModalContent">
-          {w > 768 ? (
-            <>
+        {w > 768 ? (
+          <>
+            <img src={ModalImg} alt="Modal" className="ModalImg" />
+            <img src={RingShadow} alt="Ring Shadow" className="RingImg" />
+            <div className="ModalTitle">BUY RING</div>
+            <div className="ModalClose" onClick={() => dispatch(closeModal())}>
+              <RxCross2
+                className="CloseIcon"
+                size={"clamp(0px, 2.5vw, 40px)"}
+              />
+            </div>
+            <div className="ModalContent">
               <div
                 style={{
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "start",
                   width: "100%",
-                  gap: "2vw",
+                  gap: "clamp(0px, 2vw, 38px)",
                 }}
               >
                 <TInput name="Name" placeholder="Ivan" />
@@ -88,215 +94,316 @@ function Modal() {
                   style={{ width: "100%" }}
                 />
               </div>
-            </>
-          ) : (
-            <>
               <div
                 style={{
+                  width: "95%",
+                  marginTop: "clamp(0px, 1vw, 17px)",
                   display: "flex",
                   flexDirection: "row",
-                  justifyContent: "start",
-                  width: "100%",
-                  gap: "2vw",
-                  marginBottom: "-0.5vw",
                 }}
               >
-                <TInput name="Name" placeholder="Ivan" />
-                <TInput name="Family Name" placeholder="Ivanov" />
-              </div>
-              <div style={{ width: "95%", marginBottom: "-1.25vw" }}>
                 <TInput
-                  name="Email"
-                  placeholder="ivan@gmail.com"
-                  style={{ width: "100%" }}
+                  name="Quantity"
+                  placeholder="2"
+                  style={{
+                    width: "clamp(0px, 1vw, 17px)",
+                    paddingRight: "clamp(0px, 1vw, 17px)",
+                  }}
                 />
-              </div>
-            </>
-          )}
-
-          <div
-            style={{
-              width: "95%",
-              marginTop: "1vw",
-              display: "flex",
-              flexDirection: "row",
-            }}
-          >
-            {w > 768 ? (
-              <TInput
-                name="Quantity"
-                placeholder="2"
-                style={{ width: "1vw", paddingRight: "1vw" }}
-              />
-            ) : (
-              <TInput
-                name="Quantity"
-                placeholder="2"
-                style={{ width: "1vw", paddingRight: "1.6vw" }}
-              />
-            )}
-
-            {w > 768 ? (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "start",
-                  justifyContent: "start",
-                  gap: "0.5vw",
-                  background: "#000",
-                  padding: "0px 1vw",
-                  paddingLeft: "3vw",
-                  borderRadius: "0.5vw",
-                  color: "white",
-                  fontSize: "1vw",
-                }}
-              >
-                <div
-                  className="Name"
-                  style={{
-                    marginBottom: "1vw",
-                    display: "flex",
-                    flexDirection: "row",
-                    alignContent: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  Size
-                  <span style={{ marginLeft: "1.5vw", color: "#FFFFFF66" }}>
-                    How to pick the size?
-                  </span>
-                </div>
                 <div
                   style={{
                     display: "flex",
-                    flexDirection: "row",
-                    width: "17vw",
-                    justifyContent: "space-between",
+                    flexDirection: "column",
+                    alignItems: "start",
+                    justifyContent: "start",
+                    gap: "clamp(0px, 0.5vw, 8px)",
+                    background: "#000",
+                    padding: "0px 1vw",
+                    paddingRight: "clamp(0px, 1vw, 17px)",
+                    paddingLeft: "clamp(0px, 3vw, 50px)",
+                    borderRadius: "0.5vw",
+                    color: "white",
+                    fontSize: "clamp(0px, 1vw, 17px)",
                   }}
                 >
-                  <IoIosArrowBack onClick={decrease} color="#C1EF00" />
-                  <span
-                    className="Number"
-                    style={{ color: value - 1 <= 0 ? "#ff6759" : "#FFFFFF33" }}
-                  >
-                    {(value - 1).toFixed(1)}
-                  </span>
-                  <span
-                    className="Number"
+                  <div
+                    className="Name"
                     style={{
-                      color: value - 0.5 <= 0 ? "#ff6759" : "#FFFFFF70",
+                      marginBottom: "clamp(0px, 1vw, 17px)",
+                      display: "flex",
+                      flexDirection: "row",
+                      alignContent: "center",
+                      justifyContent: "center",
                     }}
                   >
-                    {(value - 0.5).toFixed(1)}
-                  </span>
-                  <span className="Number" style={{ color: "#C1EF00" }}>
-                    {value.toFixed(1)}
-                  </span>
-                  <span className="Number" style={{ color: "#FFFFFF70" }}>
-                    {(value + 0.5).toFixed(1)}
-                  </span>
-                  <span className="Number" style={{ color: "#FFFFFF33" }}>
-                    {(value + 1).toFixed(1)}
-                  </span>
-                  <IoIosArrowForward onClick={increase} color="#C1EF00" />
+                    Size
+                    <span
+                      style={{
+                        marginLeft: "clamp(0px, 1.5vw, 26px)",
+                        color: "#FFFFFF66",
+                        textDecoration: "underline",
+                        cursor: "pointer",
+                      }}
+                    >
+                      How to pick the size?
+                    </span>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      width: "clamp(0px, 17vw, 300px)",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <IoIosArrowBack
+                      onClick={decrease}
+                      color="#C1EF00"
+                      style={{ cursor: "pointer" }}
+                    />
+                    <span
+                      className="Number"
+                      onClick={value > 1 ? () => selectValue(-1) : null}
+                      style={{
+                        color: value - 1 <= 0 ? "#ff6759" : "#FFFFFF33",
+                        cursor: value - 1 <= 0 ? "" : "pointer",
+                      }}
+                    >
+                      {(value - 1).toFixed(1)}
+                    </span>
+                    <span
+                      className="Number"
+                      onClick={value > 0.5 ? () => selectValue(-0.5) : null}
+                      style={{
+                        color: value - 0.5 <= 0 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value - 0.5 <= 0 ? "" : "pointer",
+                      }}
+                    >
+                      {(value - 0.5).toFixed(1)}
+                    </span>
+                    <span className="Number" style={{ color: "#C1EF00" }}>
+                      {value.toFixed(1)}
+                    </span>
+                    <span
+                      className="Number"
+                      onClick={value < 99.5 ? () => selectValue(0.5) : null}
+                      style={{
+                        color: value + 0.5 >= 100 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value + 0.5 >= 100 ? "" : "pointer",
+                      }}
+                    >
+                      {(value + 0.5).toFixed(1)}
+                    </span>
+                    <span
+                      className="Number"
+                      onClick={value < 99 ? () => selectValue(1) : null}
+                      style={{
+                        color: value + 1 >= 100 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value + 1 >= 100 ? "" : "pointer",
+                      }}
+                    >
+                      {(value + 1).toFixed(1)}
+                    </span>
+                    <IoIosArrowForward
+                      onClick={increase}
+                      color="#C1EF00"
+                      style={{ cursor: "pointer" }}
+                    />
+                  </div>
                 </div>
               </div>
-            ) : (
+              <Slider
+                value={"Buy"}
+                styles={{
+                  width: "clamp(0px, 12vw, 200px)",
+                  height: "clamp(0px, 3vw, 50px)",
+                  marginLeft: "0",
+                  marginTop: "clamp(0px, 2vw, 34px)",
+                }}
+                stylesvalue={{
+                  paddingLeft: "clamp(0px, 4.5vw, 75px)",
+                  paddingRight: "0",
+                  fontSize: "clamp(0px, 1vw, 17px)",
+                  fontFamily: '"Lexend", sans-serif',
+                }}
+                stylesicon={{
+                  width: "clamp(0px, 2.2vw, 26px)",
+                  height: "clamp(0px, 2.2vw, 26px)",
+                  marginRight: "clamp(0px, 0.4vw, 6.68px)",
+                }}
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <img src={ModalImgMobile} alt="Modal" className="ModalImgMob" />
+            <img
+              src={RingShadowMobile}
+              alt="Ring Shadow"
+              className="RingImgMob"
+            />
+            <div className="ModalTitle">BUY RING</div>
+            <div className="ModalClose" onClick={() => dispatch(closeModal())}>
+              <RxCross2 className="CloseIcon" size={"clamp(0px, 7vw, 30px)"} />
+            </div>
+            <div className="ModalContent">
+              <TInput name="Name" placeholder="Ivan" />
+              <TInput name="Last Name" placeholder="Ivanov" />
+              <div style={{ width: "100%" }}>
+                <TInput name="Email" placeholder="ivan@gmail.com" />
+              </div>
               <div
                 style={{
+                  width: "100%",
+                  marginTop: "1vw",
                   display: "flex",
-                  flexDirection: "column",
-                  alignItems: "start",
-                  justifyContent: "start",
-                  gap: "10px",
-                  background: "#000",
-                  padding: "0px 1vw",
-                  borderRadius: "0.5vw",
-                  color: "white",
-                  fontSize: "1vw",
+                  flexDirection: "row",
                 }}
               >
-                <div
-                  className="Name"
-                  style={{
-                    marginBottom: "0px",
-                    display: "flex",
-                    flexDirection: "row",
-                    alignContent: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  Size
-                  <span style={{ marginLeft: "1.5vw", color: "#FFFFFF66" }}>
-                    How to pick the size?
-                  </span>
-                </div>
+                <TInput
+                  name="Quantity"
+                  placeholder="2"
+                  style={{ width: "4vw", paddingRight: "1vw" }}
+                  stylediv={{ width: "clamp(0px, 15vw, 65px)" }}
+                />
                 <div
                   style={{
                     display: "flex",
-                    flexDirection: "row",
+                    flexDirection: "column",
+                    alignItems: "start",
+                    justifyContent: "start",
+                    gap: "clamp(0px, 0.5vw, 2.31px)",
+                    background: "#000",
+                    padding: "0px",
+                    paddingRight: "clamp(0px, 1vw, 5px)",
+                    paddingLeft: "clamp(0px, 8vw, 37px)",
+                    borderRadius: "0.5vw",
+                    color: "white",
+                    fontSize: "1vw",
                   }}
                 >
-                  <IoIosArrowBack onClick={decrease} color="#C1EF00" />
-                  <span className="Number" style={{ color: "#FFFFFF33" }}>
-                    {(value - 1).toFixed(1)}
-                  </span>
-                  <span className="Number" style={{ color: "#FFFFFF70" }}>
-                    {(value - 0.5).toFixed(1)}
-                  </span>
-                  <span className="Number" style={{ color: "#C1EF00" }}>
-                    {value.toFixed(1)}
-                  </span>
-                  <span className="Number" style={{ color: "#FFFFFF70" }}>
-                    {(value + 0.5).toFixed(1)}
-                  </span>
-                  <span className="Number" style={{ color: "#FFFFFF33" }}>
-                    {(value + 1).toFixed(1)}
-                  </span>
-                  <IoIosArrowForward onClick={increase} color="#C1EF00" />
+                  <div
+                    className="Name"
+                    style={{
+                      marginBottom: "1vw",
+                      display: "flex",
+                      flexDirection: "row",
+                      alignContent: "center",
+                      justifyContent: "center",
+                      fontSize: "clamp(0px, 3.5vw, 15px)",
+                    }}
+                  >
+                    Size
+                    <span
+                      style={{
+                        marginLeft: "4.5vw",
+                        color: "#FFFFFF66",
+                        textDecoration: "underline",
+                        cursor: "pointer",
+                      }}
+                    >
+                      How to pick the size?
+                    </span>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      width: "clamp(0px, 55vw, 234px)",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      height: "clamp(0px, 8vw, 35px)",
+                    }}
+                  >
+                    <IoIosArrowBack
+                      onClick={decrease}
+                      color="#C1EF00"
+                      style={{
+                        cursor: "pointer",
+                        height: "4vw",
+                        width: "4vw",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <span
+                      className="Number"
+                      onClick={value > 1 ? () => selectValue(-1) : null}
+                      style={{
+                        color: value - 1 <= 0 ? "#ff6759" : "#FFFFFF33",
+                        cursor: value - 1 <= 0 ? "" : "pointer",
+                      }}
+                    >
+                      {(value - 1).toFixed(1)}
+                    </span>
+                    <span
+                      className="Number"
+                      onClick={value > 0.5 ? () => selectValue(-0.5) : null}
+                      style={{
+                        color: value - 0.5 <= 0 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value - 0.5 <= 0 ? "" : "pointer",
+                      }}
+                    >
+                      {(value - 0.5).toFixed(1)}
+                    </span>
+                    <span className="Number" style={{ color: "#C1EF00" }}>
+                      {value.toFixed(1)}
+                    </span>
+                    <span
+                      className="Number"
+                      onClick={value < 99.5 ? () => selectValue(0.5) : null}
+                      style={{
+                        color: value + 0.5 >= 100 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value + 0.5 >= 100 ? "" : "pointer",
+                      }}
+                    >
+                      {(value + 0.5).toFixed(1)}
+                    </span>
+                    <span
+                      className="Number"
+                      onClick={value < 99 ? () => selectValue(1) : null}
+                      style={{
+                        color: value + 1 >= 100 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value + 1 >= 100 ? "" : "pointer",
+                      }}
+                    >
+                      {(value + 1).toFixed(1)}
+                    </span>
+                    <IoIosArrowForward
+                      onClick={increase}
+                      color="#C1EF00"
+                      style={{
+                        cursor: "pointer",
+                        width: "4vw",
+                        height: "4vw",
+                        flexShrink: 0,
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
-            )}
-          </div>
-          {w > 768 ? (
-            <Slider
-              value={"Buy"}
-              styles={{
-                width: "12vw",
-                height: "3vw",
-                marginLeft: "0",
-                marginTop: "2vw",
-              }}
-              stylesvalue={{
-                paddingLeft: "4.5vw",
-                paddingRight: "0",
-                fontSize: "1vw",
-                fontFamily: '"Lexend", sans-serif',
-              }}
-              stylesicon={{
-                width: "2.2vw",
-                height: "2.2vw",
-                marginRight: "0.4vw",
-              }}
-            />
-          ) : (
-            <Slider
-              value={"Buy"}
-              styles={{
-                width: "15vw",
-                height: "5vw",
-                marginLeft: "0",
-              }}
-              stylesvalue={{
-                paddingLeft: "5vw",
-                paddingRight: "0",
-                fontSize: "2vw",
-              }}
-              stylesicon={{ height: "4vw", width: "4vw", marginRight: "0.5vw" }}
-            />
-          )}
-        </div>
+              <Slider
+                value={"Buy"}
+                styles={{
+                  width: "clamp(0px, 50vw, 214px)",
+                  height: "clamp(0px, 13vw, 56px)",
+                  marginLeft: "0",
+                  marginTop: "clamp(0px, 2vw, 9px)",
+                }}
+                stylesvalue={{
+                  paddingLeft: "clamp(0px, 17vw, 75px)",
+                  paddingRight: "0",
+                  fontSize: "clamp(0px, 5vw, 21px)",
+                  fontFamily: '"Lexend", sans-serif',
+                }}
+                stylesicon={{
+                  width: "clamp(0px, 11vw, 48px)",
+                  height: "clamp(0px, 11vw, 48px)",
+                  marginRight: "clamp(0px, 1vw, 4.2px)",
+                }}
+              />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

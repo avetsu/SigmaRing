@@ -28,6 +28,17 @@
   border-top: rgba(255, 255, 255, 0.2) 1px solid;
 }
 
+.Answer {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 78vw;
+  height: 6vw;
+  border-top: rgba(255, 255, 255, 0.2) 1px solid;
+}
+
 .QuestionNumber {
   font-size: 1.3vw;
   font-weight: 700;
@@ -40,12 +51,37 @@
   width: 21vw;
 }
 
+.AnswerText {
+  margin-left: -2.5vw;
+  font-size: 1vw;
+  font-weight: 300;
+  width: 21vw;
+}
+
 .QuestionArrowIcon {
   background-color: #c1ef00;
   width: 3vw;
   height: 3vw;
   border-radius: 100%;
   margin-right: 0.2vw;
+}
+
+.QuestionArrowIcon:hover {
+  background-color: #6d8802;
+}
+
+.AnswerContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.AnswerContainer.open {
+  max-height: 300px;
+}
+
+.QuestionArrowIcon.open {
+  transform: rotate(90deg);
 }
 
 @media (max-width: 768px) {
@@ -76,6 +112,16 @@
     height: 16vw;
     border-top: rgba(255, 255, 255, 0.2) 1px solid;
   }
+  .Answer {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 16vw;
+    border-top: rgba(255, 255, 255, 0.2) 1px solid;
+  }
   .QuestionNumber {
     font-size: 4vw;
     font-weight: 700;
@@ -83,6 +129,13 @@
     margin-left: 5vw;
   }
   .QuestionText {
+    font-size: 3vw;
+    font-weight: 300;
+    width: auto;
+    margin: 0vw;
+    padding: 0;
+  }
+  .AnswerText {
     font-size: 3vw;
     font-weight: 300;
     width: auto;

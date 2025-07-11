@@ -12,7 +12,7 @@ const Hamburger = ({ onClick, isOpen }) => (
     {!isOpen && (
       <>
         <div className="Hamburger-line" />
-        <div className="Hamburger-line" style={{ width: 29, marginTop: 10 }} />
+        <div className="Hamburger-line Line2" />
       </>
     )}
   </div>
@@ -43,7 +43,7 @@ export default function Header() {
           <Slider
             value="Buy Ring"
             className="hide-on-mobile"
-            styles={{ marginTop: "0px", height: "4vw", width: "16vw" }}
+            styles={{ margin: "0px 10px", height: "4vw", width: "16vw" }}
             stylesvalue={{
               paddingLeft: "3.5vw",
               paddingRight: "0vw",
@@ -57,7 +57,7 @@ export default function Header() {
       <nav className={`MobileMenu ${menuOpen ? "open" : ""}`}>
         <RxCross2
           size={32}
-          color="#D9D9D9"
+          className="Cross"
           onClick={() => setMenuOpen(false)}
           style={{
             alignSelf: "flex-start",

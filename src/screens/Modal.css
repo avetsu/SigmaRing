@@ -32,7 +32,7 @@
 
 .ModalImgMob {
   position: absolute;
-  width: clamp(0px, calc(100vw - 40px), 400px);
+  width: clamp(0px, calc(80vw - 40px), 400px);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -70,10 +70,10 @@
 }
 
 .RingImgMob {
-  width: clamp(0px, calc(93vw - 40px), 360px);
+  width: clamp(0px, calc(74.4vw - 40px), 360px);
   position: absolute;
   bottom: 6vw;
-  left: clamp(-67px, -13vw, 10000px);
+  left: clamp(-67px, -13vw, 0px);
   transform: translateX(-50%);
   max-width: none;
 }
@@ -128,35 +128,35 @@
   }
 
   .ModalTitle {
-    font-size: clamp(0px, 10vw, 45px);
+    font-size: clamp(0px, 8vw, 45px);
     width: 60vw;
     text-align: center;
-    bottom: clamp(0px, 84vw, 373px);
-    letter-spacing: clamp(-7px, -1.5vw, 0px);
+    bottom: clamp(0px, 65vw, 373px);
+    letter-spacing: clamp(-7px, -1.1vw, 0px);
     transform: translateX(-50%);
   }
   .ModalClose {
-    bottom: clamp(0px, 85vw, 376px);
-    left: clamp(0px, 32.5vw, 147px);
+    bottom: clamp(0px, 65vw, 376px);
+    left: clamp(0px, 25vw, 147px);
   }
   .ModalContent {
-    width: clamp(0px, calc(85vw - 40px), 350px);
-    height: clamp(0px, 112vw, 486px);
+    width: clamp(0px, calc(65vw - 20px), 350px);
+    height: clamp(0px, 90vw, 486px);
     justify-content: space-evenly;
     transform: translateX(-50%);
-    top: clamp(-98px, -20vw, 0px);
+    top: clamp(-98px, -14vw, 0px);
     max-width: none;
     margin: 0;
     align-items: center;
   }
   .Name {
-    font-size: clamp(0px, 3.5vw, 15px);
+    font-size: clamp(0px, 2.8vw, 15px);
   }
   .Input {
-    height: clamp(0px, 8vw, 36px);
+    height: clamp(0px, 6.4vw, 36px);
     border-radius: 10vw;
-    font-size: clamp(0px, 4vw, 18px);
-    padding-left: clamp(0px, 3vw, 13px);
+    font-size: clamp(0px, 3.2vw, 18px);
+    padding-left: clamp(0px, 2.4vw, 13px);
     width: calc(100% - 6vw);
   }
   .Input:focus {
@@ -165,11 +165,11 @@
     box-shadow: 0 0 0 2px rgb(226, 255, 165);
   }
   .Number {
-    font-size: clamp(0px, 3.5vw, 15px);
+    font-size: clamp(0px, 2.8vw, 15px);
     font-weight: 400;
     margin: 0;
-    margin-left: clamp(0px, 1vw, 4.3px);
-    margin-right: clamp(0px, 1vw, 4.3px);
+    margin-left: clamp(0px, 0.8vw, 4.3px);
+    margin-right: clamp(0px, 0.8vw, 4.3px);
   }
   /* 
   .Input {

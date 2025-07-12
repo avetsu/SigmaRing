@@ -244,7 +244,10 @@ function Modal() {
             />
             <div className="ModalTitle">BUY RING</div>
             <div className="ModalClose" onClick={() => dispatch(closeModal())}>
-              <RxCross2 className="CloseIcon" size={"clamp(0px, 7vw, 30px)"} />
+              <RxCross2
+                className="CloseIcon"
+                size={"clamp(0px, 5.6vw, 30px)"}
+              />
             </div>
             <div className="ModalContent">
               <TInput name="Name" placeholder="Ivan" />
@@ -263,8 +266,8 @@ function Modal() {
                 <TInput
                   name="Quantity"
                   placeholder="2"
-                  style={{ width: "4vw", paddingRight: "1vw" }}
-                  stylediv={{ width: "clamp(0px, 15vw, 65px)" }}
+                  style={{ width: "3.2vw", paddingRight: "0.8vw" }}
+                  stylediv={{ width: "clamp(0px, 12vw, 65p)" }}
                 />
                 <div
                   style={{
@@ -272,31 +275,31 @@ function Modal() {
                     flexDirection: "column",
                     alignItems: "start",
                     justifyContent: "start",
-                    gap: "clamp(0px, 0.5vw, 2.31px)",
+                    gap: "clamp(0px, 0.4vw, 2.31px)",
                     background: "#000",
                     padding: "0px",
-                    paddingRight: "clamp(0px, 1vw, 5px)",
-                    paddingLeft: "clamp(0px, 8vw, 37px)",
+                    paddingRight: "clamp(0px, 0.8vw, 5px)",
+                    paddingLeft: "clamp(0px, 6.4vw, 37px)",
                     borderRadius: "0.5vw",
                     color: "white",
-                    fontSize: "1vw",
+                    fontSize: "0.8vw",
                   }}
                 >
                   <div
                     className="Name"
                     style={{
-                      marginBottom: "1vw",
+                      marginBottom: "0.8vw",
                       display: "flex",
                       flexDirection: "row",
                       alignContent: "center",
                       justifyContent: "center",
-                      fontSize: "clamp(0px, 3.5vw, 15px)",
+                      fontSize: "clamp(0px, 2.8vw, 15px)",
                     }}
                   >
                     Size
                     <span
                       style={{
-                        marginLeft: "4.5vw",
+                        marginLeft: "3.6vw",
                         color: "#FFFFFF66",
                         textDecoration: "underline",
                         cursor: "pointer",
@@ -309,10 +312,10 @@ function Modal() {
                     style={{
                       display: "flex",
                       flexDirection: "row",
-                      width: "clamp(0px, 55vw, 234px)",
+                      width: "clamp(0px, 44vw, 234px)",
                       justifyContent: "space-between",
                       alignItems: "center",
-                      height: "clamp(0px, 8vw, 35px)",
+                      height: "clamp(0px, 6.4vw, 35px)",
                     }}
                   >
                     <IoIosArrowBack
@@ -320,8 +323,8 @@ function Modal() {
                       color="#C1EF00"
                       style={{
                         cursor: "pointer",
-                        height: "4vw",
-                        width: "4vw",
+                        height: "3.2vw",
+                        width: "3.2vw",
                         flexShrink: 0,
                       }}
                     />
@@ -373,8 +376,8 @@ function Modal() {
                       color="#C1EF00"
                       style={{
                         cursor: "pointer",
-                        width: "4vw",
-                        height: "4vw",
+                        width: "3.2vw",
+                        height: "3.2vw",
                         flexShrink: 0,
                       }}
                     />
@@ -384,21 +387,21 @@ function Modal() {
               <Slider
                 value={"Buy"}
                 styles={{
-                  width: "clamp(0px, 50vw, 214px)",
-                  height: "clamp(0px, 13vw, 56px)",
+                  width: "clamp(0px, 40vw, 214px)",
+                  height: "clamp(0px, 104vw, 56px)",
                   marginLeft: "0",
-                  marginTop: "clamp(0px, 2vw, 9px)",
+                  marginTop: "clamp(0px, 1.6vw, 9px)",
                 }}
                 stylesvalue={{
-                  paddingLeft: "clamp(0px, 17vw, 75px)",
+                  paddingLeft: "clamp(0px, 13.6vw, 75px)",
                   paddingRight: "0",
-                  fontSize: "clamp(0px, 5vw, 21px)",
+                  fontSize: "clamp(0px, 4vw, 21px)",
                   fontFamily: '"Lexend", sans-serif',
                 }}
                 stylesicon={{
-                  width: "clamp(0px, 11vw, 48px)",
-                  height: "clamp(0px, 11vw, 48px)",
-                  marginRight: "clamp(0px, 1vw, 4.2px)",
+                  width: "clamp(0px, 8.8vw, 48px)",
+                  height: "clamp(0px, 8.8vw, 48px)",
+                  marginRight: "clamp(0px, 0.8vw, 4.2px)",
                 }}
               />
             </div>

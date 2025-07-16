@@ -181,7 +181,7 @@
     font-size: clamp(0px, 8vw, 45px);
     width: 60vw;
     text-align: center;
-    bottom: clamp(0px, 65vw, 373px);
+    bottom: clamp(0px, calc(76vw - 40px), 373px);
     letter-spacing: clamp(-7px, -1.1vw, 0px);
     transform: translateX(-50%);
   }

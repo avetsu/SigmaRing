@@ -413,7 +413,7 @@ function Modal() {
                 value={"Buy"}
                 styles={{
                   width: "clamp(0px, 40vw, 214px)",
-                  height: "clamp(0px, 104vw, 56px)",
+                  height: "clamp(0px, 10.4vw, 56px)",
                   marginLeft: "0",
                   marginTop: "clamp(0px, 1.6vw, 9px)",
                 }}

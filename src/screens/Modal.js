@@ -47,10 +47,10 @@ function Modal() {
   const dispatch = useDispatch();
   const isOpen = useSelector((state) => state.modal.isOpen);
   const [RingImgVis, setRingImgVis] = useState(false);
-  const [value, setValue] = useState(15);
+  const [value, setValue] = useState(10);
 
-  const decrease = () => setValue((v) => Math.max(0.5, v - 0.5));
-  const increase = () => setValue((v) => Math.min(99.5, v + 0.5));
+  const decrease = () => setValue((v) => Math.max(6, v - 0.5));
+  const increase = () => setValue((v) => Math.min(13, v + 0.5));
   const selectValue = (n) => setValue((v) => v + n);
   useEffect(() => {
     if (isOpen) {
@@ -107,8 +107,8 @@ function Modal() {
                   gap: "clamp(0px, 2vw, 38px)",
                 }}
               >
-                <TInput name="Name" placeholder="Ivan" />
-                <TInput name="Family Name" placeholder="Ivanov" />
+                <TInput name="First Name" placeholder="Ivan" />
+                <TInput name="Last Name" placeholder="Ivanov" />
               </div>
               <div style={{ width: "95%" }}>
                 <TInput
@@ -183,24 +183,26 @@ function Modal() {
                     <IoIosArrowBack
                       onClick={decrease}
                       color="#C1EF00"
-                      style={{ cursor: "pointer" }}
+                      style={{
+                        cursor: value <= 6 ? "" : "pointer",
+                      }}
                     />
                     <span
                       className="Number"
-                      onClick={value > 1 ? () => selectValue(-1) : null}
+                      onClick={value > 6.5 ? () => selectValue(-1) : null}
                       style={{
-                        color: value - 1 <= 0 ? "#ff6759" : "#FFFFFF33",
-                        cursor: value - 1 <= 0 ? "" : "pointer",
+                        color: value - 1 <= 5.5 ? "#ff6759" : "#FFFFFF33",
+                        cursor: value - 1 <= 5.5 ? "" : "pointer",
                       }}
                     >
                       {(value - 1).toFixed(1)}
                     </span>
                     <span
                       className="Number"
-                      onClick={value > 0.5 ? () => selectValue(-0.5) : null}
+                      onClick={value > 6 ? () => selectValue(-0.5) : null}
                       style={{
-                        color: value - 0.5 <= 0 ? "#ff6759" : "#FFFFFF70",
-                        cursor: value - 0.5 <= 0 ? "" : "pointer",
+                        color: value - 0.5 <= 5.5 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value - 0.5 <= 5.5 ? "" : "pointer",
                       }}
                     >
                       {(value - 0.5).toFixed(1)}
@@ -210,20 +212,20 @@ function Modal() {
                     </span>
                     <span
                       className="Number"
-                      onClick={value < 99.5 ? () => selectValue(0.5) : null}
+                      onClick={value < 13 ? () => selectValue(0.5) : null}
                       style={{
-                        color: value + 0.5 >= 100 ? "#ff6759" : "#FFFFFF70",
-                        cursor: value + 0.5 >= 100 ? "" : "pointer",
+                        color: value + 0.5 >= 13.5 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value + 0.5 >= 13.5 ? "" : "pointer",
                       }}
                     >
                       {(value + 0.5).toFixed(1)}
                     </span>
                     <span
                       className="Number"
-                      onClick={value < 99 ? () => selectValue(1) : null}
+                      onClick={value < 12.5 ? () => selectValue(1) : null}
                       style={{
-                        color: value + 1 >= 100 ? "#ff6759" : "#FFFFFF70",
-                        cursor: value + 1 >= 100 ? "" : "pointer",
+                        color: value + 1 >= 13.5 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value + 1 >= 13.5 ? "" : "pointer",
                       }}
                     >
                       {(value + 1).toFixed(1)}
@@ -231,7 +233,7 @@ function Modal() {
                     <IoIosArrowForward
                       onClick={increase}
                       color="#C1EF00"
-                      style={{ cursor: "pointer" }}
+                      style={{ cursor: value >= 13 ? "" : "pointer" }}
                     />
                   </div>
                 </div>
@@ -274,7 +276,7 @@ function Modal() {
               />
             </div>
             <div className="ModalContent">
-              <TInput name="Name" placeholder="Ivan" />
+              <TInput name="First Name" placeholder="Ivan" />
               <TInput name="Last Name" placeholder="Ivanov" />
               <div style={{ width: "100%" }}>
                 <TInput name="Email" placeholder="ivan@gmail.com" />
@@ -347,7 +349,7 @@ function Modal() {
                       onClick={decrease}
                       color="#C1EF00"
                       style={{
-                        cursor: "pointer",
+                        cursor: value - 1 <= 5.5 ? "" : "pointer",
                         height: "3.2vw",
                         width: "3.2vw",
                         flexShrink: 0,
@@ -355,20 +357,20 @@ function Modal() {
                     />
                     <span
                       className="Number"
-                      onClick={value > 1 ? () => selectValue(-1) : null}
+                      onClick={value > 6.5 ? () => selectValue(-1) : null}
                       style={{
-                        color: value - 1 <= 0 ? "#ff6759" : "#FFFFFF33",
-                        cursor: value - 1 <= 0 ? "" : "pointer",
+                        color: value - 1 <= 5.5 ? "#ff6759" : "#FFFFFF33",
+                        cursor: value - 1 <= 5.5 ? "" : "pointer",
                       }}
                     >
                       {(value - 1).toFixed(1)}
                     </span>
                     <span
                       className="Number"
-                      onClick={value > 0.5 ? () => selectValue(-0.5) : null}
+                      onClick={value > 6 ? () => selectValue(-0.5) : null}
                       style={{
-                        color: value - 0.5 <= 0 ? "#ff6759" : "#FFFFFF70",
-                        cursor: value - 0.5 <= 0 ? "" : "pointer",
+                        color: value - 0.5 <= 5.5 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value - 0.5 <= 5.5 ? "" : "pointer",
                       }}
                     >
                       {(value - 0.5).toFixed(1)}
@@ -378,20 +380,20 @@ function Modal() {
                     </span>
                     <span
                       className="Number"
-                      onClick={value < 99.5 ? () => selectValue(0.5) : null}
+                      onClick={value < 13 ? () => selectValue(0.5) : null}
                       style={{
-                        color: value + 0.5 >= 100 ? "#ff6759" : "#FFFFFF70",
-                        cursor: value + 0.5 >= 100 ? "" : "pointer",
+                        color: value + 0.5 >= 13.5 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value + 0.5 >= 13.5 ? "" : "pointer",
                       }}
                     >
                       {(value + 0.5).toFixed(1)}
                     </span>
                     <span
                       className="Number"
-                      onClick={value < 99 ? () => selectValue(1) : null}
+                      onClick={value < 12.5 ? () => selectValue(1) : null}
                       style={{
-                        color: value + 1 >= 100 ? "#ff6759" : "#FFFFFF70",
-                        cursor: value + 1 >= 100 ? "" : "pointer",
+                        color: value + 1 >= 13.5 ? "#ff6759" : "#FFFFFF70",
+                        cursor: value + 1 >= 13.5 ? "" : "pointer",
                       }}
                     >
                       {(value + 1).toFixed(1)}
@@ -400,7 +402,7 @@ function Modal() {
                       onClick={increase}
                       color="#C1EF00"
                       style={{
-                        cursor: "pointer",
+                        cursor: value + 1 >= 13.5 ? "" : "pointer",
                         width: "3.2vw",
                         height: "3.2vw",
                         flexShrink: 0,

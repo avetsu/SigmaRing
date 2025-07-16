@@ -17,8 +17,44 @@
   position: relative;
 }
 
+.RingSelectionContainer {
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.RingSelectionImgContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 45vw;
+  width: 45vw;
+  max-width: 700px;
+  z-index: 1001;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.RingSelectionImg {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45vw;
+  max-width: 700px;
+}
+
 .CloseIcon:hover {
   color: #757575;
+  cursor: pointer;
 }
 
 .ModalImg {
@@ -125,6 +161,20 @@
 @media (max-width: 768px) {
   .Backdrop {
     backdrop-filter: blur(32px);
+  }
+
+  .RingSelectionContainer {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(100px);
+  }
+
+  .RingSelectionImgContainer {
+    width: clamp(0px, 80vw, 440px);
+    height: clamp(0px, 80vw, 440px);
+  }
+
+  .RingSelectionImg {
+    width: clamp(0px, 80vw, 440px);
   }
 
   .ModalTitle {

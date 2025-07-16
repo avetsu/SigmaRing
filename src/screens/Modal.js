@@ -3,6 +3,7 @@ import ModalImg from "../photos/Modal.png";
 import ModalImgMobile from "../photos/ModalMobile.png";
 import RingShadow from "../photos/RingShadow.png";
 import RingShadowMobile from "../photos/RingShadowMobile.png";
+import RingSelection from "../photos/RingSelection.webp";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { useEffect, useState } from "react";
@@ -45,6 +46,7 @@ function Modal() {
   const { w, h } = useWindowSize();
   const dispatch = useDispatch();
   const isOpen = useSelector((state) => state.modal.isOpen);
+  const [RingImgVis, setRingImgVis] = useState(false);
   const [value, setValue] = useState(15);
 
   const decrease = () => setValue((v) => Math.max(0.5, v - 0.5));
@@ -63,6 +65,27 @@ function Modal() {
   return (
     <div className="Backdrop" onClick={() => dispatch(closeModal())}>
       <div className="Modal" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="RingSelectionContainer"
+          onClick={() => setRingImgVis(false)}
+          style={!RingImgVis ? { display: "none" } : {}}
+        >
+          <div className="RingSelectionImgContainer">
+            <RxCross2
+              className="CloseIcon"
+              color="black"
+              style={{ padding: "1vw" }}
+              size={
+                w > 768 ? "clamp(0px, 2.5vw, 40px)" : "clamp(0px, 5.6vw, 30px)"
+              }
+            />
+            <img
+              src={RingSelection}
+              alt="Ring Selection"
+              className="RingSelectionImg"
+            />
+          </div>
+        </div>
         {w > 768 ? (
           <>
             <img src={ModalImg} alt="Modal" className="ModalImg" />
@@ -144,6 +167,7 @@ function Modal() {
                         textDecoration: "underline",
                         cursor: "pointer",
                       }}
+                      onClick={() => setRingImgVis(true)}
                     >
                       How to pick the size?
                     </span>
@@ -304,6 +328,7 @@ function Modal() {
                         textDecoration: "underline",
                         cursor: "pointer",
                       }}
+                      onClick={() => setRingImgVis(true)}
                     >
                       How to pick the size?
                     </span>

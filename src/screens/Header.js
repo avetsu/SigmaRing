@@ -39,17 +39,7 @@ export default function Header() {
         </div>
 
         <div className="right">
-          <Slider
-            value="Buy Ring"
-            className="hide-on-mobile"
-            styles={{ margin: "0px 10px", height: "4vw", width: "16vw" }}
-            stylesvalue={{
-              paddingLeft: "3.5vw",
-              paddingRight: "0vw",
-              fontSize: "1.5vw",
-            }}
-            stylesicon={{ width: "3vw", height: "3vw", marginRight: "0.5vw" }}
-          />
+          
         </div>
       </header>
 

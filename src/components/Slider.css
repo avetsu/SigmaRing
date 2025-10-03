@@ -2,7 +2,7 @@
   margin: 10px;
   background-color: #c1ef00;
   height: 55px;
-  border-radius: 30px;
+  border-radius: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,10 +10,81 @@
   font-size: 18px;
   font-weight: 400;
   z-index: 9;
+  position: relative;
+  overflow: hidden;
 }
 
 .Slider:hover {
-  background-color: #6d8802;
+  /* background-color: #6d8802; */
+  cursor: pointer;
+}
+
+.Slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 2;
+
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+@keyframes shine-left-to-right-and-back {
+  0% {
+    left: -75%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    left: 75%;
+    opacity: 1;
+  }
+  75% {
+    left: 0%;
+    opacity: 1;
+  }
+  100% {
+    left: -75%;
+    opacity: 1;
+  }
+}
+
+.Slider:hover::before {
+  animation: shine-left-to-right-and-back 1.5s forwards;
+  opacity: 1;
+}
+.Slider:not(:hover)::before {
+  animation: none;
+  opacity: 0;
+}
+
+.Slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 .purple {
@@ -23,7 +94,7 @@
 }
 
 .purple:hover {
-  background-color: #510995;
+  /* background-color: #510995; */
 }
 
 .ArrowIcon {
@@ -37,4 +108,9 @@
 .SliderValue {
   padding-left: 40px;
   padding-right: 30px;
+}
+
+.Slider:hover::before {
+  left: 0%;
+  opacity: 1;
 }

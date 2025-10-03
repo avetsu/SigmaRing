@@ -11,7 +11,7 @@ const Hamburger = ({ onClick, isOpen }) => (
     {!isOpen && (
       <>
         <div className="Hamburger-line" />
-        <div className="Hamburger-line" style={{ width: 29, marginTop: 10 }} />
+        <div className="Hamburger-line Line2" />
       </>
     )}
   </div>
@@ -19,7 +19,7 @@ const Hamburger = ({ onClick, isOpen }) => (
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const lang = useSelector((s) => s.language.current); // ⬅️ read from Redux
+  const lang = useSelector((s) => s.language.current);
   const dispatch = useDispatch();
 
   const changeLang = (l) => {
@@ -42,16 +42,21 @@ export default function Header() {
           <Slider
             value="Buy Ring"
             className="hide-on-mobile"
-            styles={{ marginTop: "0px" }}
+            styles={{ margin: "0px 10px", height: "4vw", width: "16vw" }}
+            stylesvalue={{
+              paddingLeft: "3.5vw",
+              paddingRight: "0vw",
+              fontSize: "1.5vw",
+            }}
+            stylesicon={{ width: "3vw", height: "3vw", marginRight: "0.5vw" }}
           />
         </div>
       </header>
 
-      {/* mobile dropdown */}
       <nav className={`MobileMenu ${menuOpen ? "open" : ""}`}>
         <RxCross2
           size={32}
-          color="#D9D9D9"
+          className="Cross"
           onClick={() => setMenuOpen(false)}
           style={{
             alignSelf: "flex-start",
@@ -63,12 +68,26 @@ export default function Header() {
         <button
           className={lang === "en" ? "active" : "inactive"}
           onClick={() => changeLang("en")}
+          style={{
+            minWidth: "7vw",
+            minHeight: "4vw",
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
         >
           EN
         </button>
         <button
           className={lang === "ru" ? "active" : "inactive"}
           onClick={() => changeLang("ru")}
+          style={{
+            minWidth: "7vw",
+            minHeight: "4vw",
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
         >
           RU
         </button>

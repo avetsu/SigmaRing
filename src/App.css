@@ -30,4 +30,5 @@
   font-family: "Lexend", sans-serif;
   height: 100vh;
   white-space: pre-line;
+  /* overflow-x: hidden; */
 }

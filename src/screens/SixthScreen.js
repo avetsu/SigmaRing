@@ -6,6 +6,7 @@ import HandShoes from "../photos/HandShoes.png";
 import Pyjamas from "../photos/Pyjamas.png";
 import { useState, useEffect } from "react";
 import { useT } from "../features/UseT";
+import { useSelector } from "react-redux";
 
 function useWindowSize() {
   const [size, setSize] = useState({
@@ -25,14 +26,26 @@ function useWindowSize() {
 
 function SixthScreen() {
   const { w, h } = useWindowSize();
+  const lang = useSelector((s) => s.language.current);
+  console.log(lang);
   const t = useT();
   return (
     <div className="SixthScreen">
-      <div class="DarkOverlay"></div>
+      <div className="DarkOverlay"></div>
       <div className="SixthScreenContainer">
         {w > 768 ? (
-          <div style={{ display: "flex", flexDirection: "row" }}>
-            <div style={{ display: "flex", flexDirection: "column" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              maxWidth: "calc(100vw - 40px)",
+              justifyContent: "center",
+              margin: "0 20px",
+            }}
+          >
+            <div
+              style={{ display: "flex", flexDirection: "column", flex: "1" }}
+            >
               <div
                 style={{
                   display: "flex",
@@ -52,55 +65,76 @@ function SixthScreen() {
                   <div style={{ textAlign: "start" }}>
                     <div
                       style={{
-                        fontSize: "40px",
+                        fontSize: "2vw",
                         fontWeight: 275,
-                        letterSpacing: "20px",
+                        letterSpacing: "1vw",
                       }}
                     >
                       {t.s6top}
                     </div>
                     <div
                       style={{
-                        fontSize: "110px",
+                        fontSize: "6vw",
                         fontWeight: 700,
-                        letterSpacing: "-7.7px",
-                        marginTop: "-20px",
+                        letterSpacing: "-0.5vw",
+                        marginTop: lang === "ru" ? "-2vw" : "-1vw",
                       }}
                     >
                       {t.s6white}
-                      <span style={{ color: "#C1EF00", marginLeft: "10px" }}>
+                      <span style={{ color: "#C1EF00", marginLeft: "0.5vw" }}>
                         {t.s6green}
                       </span>
                     </div>
                     <div
                       style={{
-                        fontSize: "20px",
-                        fontWeight: 200,
-                        letterSpacing: "0.8px",
-                        marginTop: "-30px",
+                        fontSize: "1.1vw",
+                        fontWeight: 400,
+                        letterSpacing: "0.01vw",
+                        marginTop: lang === "ru" ? "-0.5vw" : "-1.5vw",
                       }}
                     >
                       {t.s6bottom}
                     </div>
                   </div>
                 </div>
-                <img src={Running} alt="Running" style={{ margin: "8px" }} />
+                <img
+                  src={Running}
+                  alt="Running"
+                  style={{ width: "39vw", marginBottom: "0.47vw" }}
+                />
               </div>
-              <div style={{ display: "flex", flexDirection: "row" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  flex: "1",
+                  justifyContent: "space-between",
+                }}
+              >
                 <img
                   src={HandWater}
                   alt="Hand Water"
-                  style={{ margin: "8px" }}
+                  style={{
+                    width: "19vw",
+                  }}
                 />
-                <img src={Pyjamas} alt="Pyjamas" style={{ margin: "8px" }} />
+                <img
+                  src={Pyjamas}
+                  alt="Pyjamas"
+                  style={{ width: "39vw", margin: "0 0.47vw" }}
+                />
                 <img
                   src={HandShoes}
                   alt="Hand Shoes"
-                  style={{ margin: "8px" }}
+                  style={{ width: "19vw" }}
                 />
               </div>
             </div>
-            <img src={HandRing} alt="Hand Ring" style={{ margin: "8px" }} />
+            <img
+              src={HandRing}
+              alt="Hand Ring"
+              style={{ width: "17vw", marginLeft: "0.47vw" }}
+            />
           </div>
         ) : (
           <div
@@ -114,19 +148,19 @@ function SixthScreen() {
             <div style={{ textAlign: "center" }}>
               <div
                 style={{
-                  fontSize: "20px",
+                  fontSize: "5vw",
                   fontWeight: 275,
-                  letterSpacing: "10px",
+                  letterSpacing: "2vw",
                 }}
               >
                 {t.s6top}
               </div>
               <div
                 style={{
-                  fontSize: "60px",
+                  fontSize: "14vw",
                   fontWeight: 700,
-                  letterSpacing: "-3px",
-                  marginTop: "-10px",
+                  letterSpacing: "-1vw",
+                  marginTop: "-3vw",
                 }}
               >
                 {t.s6white}
@@ -134,11 +168,11 @@ function SixthScreen() {
               </div>
               <div
                 style={{
-                  fontSize: "12px",
-                  fontWeight: 200,
-                  letterSpacing: "0.5px",
-                  marginTop: "-15px",
-                  marginBottom: "2vh",
+                  fontSize: "3vw",
+                  fontWeight: 400,
+                  letterSpacing: "0.1vw",
+                  marginTop: "-2vw",
+                  marginBottom: "4vw",
                 }}
               >
                 {t.s6bottom}
@@ -147,7 +181,7 @@ function SixthScreen() {
             <img
               src={Running}
               alt="Running"
-              style={{ width: "94vw", margin: "1vw" }}
+              style={{ width: "calc(100vw - 40px)", margin: "5px 20px" }}
             />
             <div style={{ display: "flex", flexDirection: "row" }}>
               <div
@@ -159,24 +193,51 @@ function SixthScreen() {
                 <img
                   src={HandWater}
                   alt="Hand Water"
-                  style={{ margin: "1vw", width: "46vw" }}
+                  style={{
+                    margin: "5px",
+                    marginLeft: "20px",
+                    width: "calc(50vw - 25px)",
+                  }}
                 />
                 <img
                   src={HandShoes}
                   alt="Hand Shoes"
-                  style={{ margin: "1vw", width: "46vw" }}
+                  style={{
+                    margin: "5px",
+                    marginLeft: "20px",
+                    width: "calc(50vw - 25px)",
+                  }}
                 />
               </div>
-              <img
-                src={HandRing}
-                alt="Hand Ring"
-                style={{ margin: "1vw", height: "85.5vw", marginLeft: "3vw" }}
-              />
+              <div
+                style={{
+                  width: "calc(50vw - 25px)",
+                  overflow: "hidden",
+                  position: "relative",
+                  margin: "5px",
+                  marginRight: "20px",
+                  borderRadius: "2vw",
+                }}
+              >
+                <img
+                  src={HandRing}
+                  alt="Hand Ring"
+                  style={{
+                    width: "100%",
+                    position: "absolute",
+                    bottom: "",
+                    left: 0,
+                  }}
+                />
+              </div>
             </div>
             <img
               src={Pyjamas}
               alt="Pyjamas"
-              style={{ margin: "1vw", width: "94vw" }}
+              style={{
+                margin: "5px 20px",
+                width: "calc(100vw - 40px)",
+              }}
             />
 
             {/**/}

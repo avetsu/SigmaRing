@@ -9,6 +9,7 @@ import PromoCard from "../components/PromoCard";
 import Slider from "../components/Slider";
 import { useState, useEffect } from "react";
 import { useT } from "../features/UseT";
+import { useSelector } from "react-redux";
 
 function useWindowSize() {
   const [size, setSize] = useState({
@@ -28,6 +29,7 @@ function useWindowSize() {
 
 function FifthScreen() {
   const { w, h } = useWindowSize();
+  const lang = useSelector((s) => s.language.current);
   const t = useT();
   return (
     <div className="FifthScreen">
@@ -38,17 +40,22 @@ function FifthScreen() {
             <span className="Limited">{t.s5purple}</span>
           </div>
           <div className="Ring">Ring</div>
-          {w < 768 && (
+          {w <= 768 && (
             <img
               src={RingShadow}
               alt="Ring Shadow"
               style={{
-                marginLeft: "-10vw",
-                width: "80vw",
+                marginLeft: "-21vw",
+                width: "104vw",
               }}
             />
           )}
-          <div className="Quantity">{t.s5subtitle}</div>
+          <div
+            className="Quantity"
+            style={{ marginTop: lang === "ru" && w <= 768 ? "-20vw" : "" }}
+          >
+            {t.s5subtitle}
+          </div>
           {w > 768 ? (
             <div className="PromoCards">
               <PromoCard image={VIP} title="VIP" text={t.s5promocard1} />
@@ -74,8 +81,8 @@ function FifthScreen() {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                gap: "2vh",
-                marginTop: "2vh",
+                gap: "2vw",
+                marginTop: "2vw",
               }}
             >
               <div className="PromoCards">
@@ -83,40 +90,43 @@ function FifthScreen() {
                   image={VIP}
                   title="VIP"
                   text={t.s5promocard1}
-                  stylesimage={{ width: "83px" }}
+                  stylesimage={{ height: "18vw" }}
                   styles={{
                     width: "28vw",
-                    height: "17vh",
-                    borderRadius: "12px",
-                    marginRight: "0",
+                    height: "42vw",
+                    borderRadius: "6vw",
+                    marginRight: "0px",
+                    justifyContent: "space-evenly",
                   }}
-                  stylestext={{ fontSize: "10px" }}
+                  stylestext={{ fontSize: "3vw", width: "22vw" }}
                 />
                 <PromoCard
                   image={Subscription}
                   title="Subscription"
-                  text={t.s5promocard5}
-                  stylesimage={{ width: "83px" }}
+                  text={t.s5promocard2}
+                  stylesimage={{ height: "18vw" }}
                   styles={{
                     width: "28vw",
-                    height: "17vh",
-                    borderRadius: "12px",
-                    marginRight: "0",
+                    height: "42vw",
+                    borderRadius: "6vw",
+                    marginRight: "0px",
+                    justifyContent: "space-evenly",
                   }}
-                  stylestext={{ fontSize: "10px" }}
+                  stylestext={{ fontSize: "3vw", width: "22vw" }}
                 />
                 <PromoCard
                   image={Guaranteed}
                   title="Guaranteed"
                   text={t.s5promocard3}
-                  stylesimage={{ width: "83px" }}
+                  stylesimage={{ height: "18vw" }}
                   styles={{
                     width: "28vw",
-                    height: "17vh",
-                    borderRadius: "12px",
-                    marginRight: "0",
+                    height: "42vw",
+                    borderRadius: "6vw",
+                    marginRight: "0px",
+                    justifyContent: "space-evenly",
                   }}
-                  stylestext={{ fontSize: "10px" }}
+                  stylestext={{ fontSize: "3vw", width: "22vw" }}
                 />
               </div>
               <div className="PromoCards">
@@ -124,27 +134,29 @@ function FifthScreen() {
                   image={OneYear}
                   title="One Year"
                   text={t.s5promocard4}
-                  stylesimage={{ width: "83px" }}
+                  stylesimage={{ height: "18vw" }}
                   styles={{
                     width: "28vw",
-                    height: "17vh",
-                    borderRadius: "12px",
-                    marginRight: "0",
+                    height: "42vw",
+                    borderRadius: "6vw",
+                    marginRight: "0px",
+                    justifyContent: "space-evenly",
                   }}
-                  stylestext={{ fontSize: "10px" }}
+                  stylestext={{ fontSize: "3vw", width: "20vw" }}
                 />
                 <PromoCard
                   image={Cards}
                   title="Cards"
                   text={t.s5promocard5}
-                  stylesimage={{ width: "83px" }}
+                  stylesimage={{ height: "18vw" }}
                   styles={{
                     width: "28vw",
-                    height: "17vh",
-                    borderRadius: "12px",
-                    marginRight: "0",
+                    height: "42vw",
+                    borderRadius: "6vw",
+                    marginRight: "0px",
+                    justifyContent: "space-evenly",
                   }}
-                  stylestext={{ fontSize: "10px" }}
+                  stylestext={{ fontSize: "3vw", width: "22vw" }}
                 />
               </div>
             </div>
@@ -155,23 +167,32 @@ function FifthScreen() {
             {w > 768 ? (
               <Slider
                 value={"Buy Premium Ring"}
-                stylesvalue={{ paddingLeft: "25px", paddingRight: "20px" }}
-                styles={{ marginLeft: "60px" }}
+                stylesvalue={{
+                  fontSize: "1vw",
+                  paddingLeft: "1.25vw",
+                  paddingRight: "1vw",
+                }}
+                styles={{ marginLeft: "3vw", height: "3vw" }}
+                stylesicon={{
+                  width: "2vw",
+                  height: "2vw",
+                  marginRight: "0.5vw",
+                }}
               />
             ) : (
               <Slider
                 value={"Buy Premium Ring"}
                 stylesvalue={{
-                  fontSize: "11px",
-                  paddingLeft: "5vw",
+                  fontSize: "3vw",
+                  paddingLeft: "4vw",
                   paddingRight: "0vw",
                 }}
                 styles={{
-                  width: "40vw",
-                  height: "5vh",
-                  marginLeft: "0",
+                  width: "43vw",
+                  height: "10vw",
+                  marginBottom: "5vw",
                 }}
-                stylesicon={{ height: "4vh", width: "4vh" }}
+                stylesicon={{ height: "8vw", width: "8vw", marginRight: "1vw" }}
               />
             )}
           </div>
@@ -181,8 +202,9 @@ function FifthScreen() {
             src={RingShadow}
             alt="Ring Shadow"
             style={{
-              marginBottom: "-200px",
-              marginLeft: "-200px",
+              marginBottom: "-10vw",
+              marginLeft: "-10vw",
+              width: "52vw",
             }}
           />
         )}

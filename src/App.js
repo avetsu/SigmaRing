@@ -18,7 +18,7 @@ function App() {
       <SecondScreen />
       <ThirdScreen />
       <FourthScreen />
-      <FifthScreen />
+      {/* <FifthScreen /> */}
       <SixthScreen />
       <SeventhScreen />
       <Footer />

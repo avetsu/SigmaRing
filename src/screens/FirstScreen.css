@@ -7,8 +7,8 @@
   justify-content: center;
   background-color: black;
   color: white;
-  margin-top: -220px;
-  padding-bottom: 90px;
+  margin-top: 0;
+  height: 50vw;
 }
 
 .Background {
@@ -38,24 +38,39 @@
 
 .Sigma {
   font-weight: 200;
-  font-size: 40px;
-  margin-bottom: -30px;
-  margin-top: 86px;
+  font-size: 2.1vw;
+  margin-bottom: -1.5vw;
+  margin-top: -3.2vw;
 }
 
-.Ring {
+.Ring1 {
   font-weight: 700;
-  font-size: 140px;
-  margin-left: -10px;
-  margin-bottom: -55px;
+  font-size: 7.3vw;
+  margin-left: -0.4vw;
+  margin-bottom: -2.8vw;
+}
+
+.Be {
+  font-weight: 700;
+  font-size: 19.2vw;
+  margin-left: -1.5vw;
+  margin-top: 0px;
+  letter-spacing: -2.6vw;
+  color: rgba(255, 255, 255, 0.59);
+  padding-right: 3.6vw;
+  background-color: rgba(255, 255, 255, 0.59);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 15.6vw;
 }
 
 .Tech {
   font-weight: 400;
-  font-size: 35px;
+  font-size: 2vw;
   margin-left: 0px;
-  max-width: 400px;
-  margin-bottom: 15px;
+  max-width: 21vw;
+  margin-bottom: 0vw;
 }
 
 .multiply {
@@ -68,29 +83,38 @@
 .OverflowingText {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   text-align: center;
   line-height: normal;
+  height: 55vh;
+  top: 0;
 }
-
+.Anim-Ring {
+  position: absolute;
+}
 .ring-wrapper {
   position: absolute;
-  top: 300px;
-  left: 4vw;
-  width: 650px;
+  bottom: 0vw;
+  width: 34vw;
   animation: floatYRing 4s ease-in-out infinite;
   z-index: 2;
 }
-
-.ring {
-  width: 100%;
+.unused {
+  top: -5vw;
+  left: 4vw;
+}
+.ringimg {
+  width: 35vw;
   transform: rotate(77.36deg);
 }
 
 .shadow {
+  width: 50vw;
   position: absolute;
-  top: 765px;
-  left: -15vw;
+  top: 13.5vw;
+  right: 18vw;
   z-index: 1;
   animation: floatYShadow 4s ease-in-out infinite;
 }
@@ -102,10 +126,10 @@
   justify-content: end;
   text-align: end;
   position: absolute;
-  right: 100px;
-  width: 430px;
+  right: 40px;
+  bottom: 2vw;
+  width: 26vw;
   height: 100%;
-  margin-top: -55vh;
   z-index: 2;
 }
 
@@ -114,53 +138,71 @@
     display: none;
   }
   .FirstScreen {
-    margin-top: 0px;
+    height: calc((100vw - 40px) * 1.76);
+    flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding-bottom: 30px;
   }
 
   .FirstScreenContentContainer {
-    width: 100%;
-    height: 100vh;
     justify-content: start;
-    margin-left: 35px;
-  }
-
-  .Background {
-    width: calc(100vw - 20px);
-    justify-content: start;
-    align-items: start;
+    margin-left: calc(20px + 7vw);
+    margin-top: 10vw;
   }
   .Sigma {
-    margin-top: 40px;
-    margin-bottom: -15px;
-    font-size: 25px;
+    font-size: 6vw;
+    margin-top: 0;
+    margin-bottom: -3vw;
   }
-  .Ring {
-    font-size: 90px;
-    margin: 0px;
-    margin-left: -15px;
+
+  .Ring1 {
+    font-size: 20vw;
+    margin-left: -1vw;
+    margin-bottom: 0;
   }
+
   .Tech {
-    font-size: 18px;
-    width: 200px;
+    font-size: 5vw;
+    max-width: 60vw;
+  }
+  .OverflowingText {
+    width: 100vw;
+    display: flex;
+    flex: 1;
+    justify-content: start;
+  }
+
+  .Anim-Ring {
+    position: relative;
+    flex-direction: column;
+  }
+  .ringimg {
+    width: 80vw;
+  }
+  .Anim-Ring {
+    position: relative;
+  }
+
+  .FirstScreenCorner {
+    right: 8vw;
+    height: auto;
+    flex-grow: 1;
+    width: 56vw;
+    bottom: 5vw;
   }
 
   .ring-wrapper {
-    width: 70vw;
-    margin-left: -90vw;
-    margin-top: -5vh;
+    position: relative;
+    margin-top: 5vw;
+    margin-left: 5vw;
+    animation: floatYRingMobile 4s ease-in-out infinite;
   }
+
   .shadow {
-    width: 75vw;
-    margin-left: -90vw;
-    margin-top: -26vh;
-  }
-  .FirstScreenCorner {
-    margin-top: -25vh;
-    margin-right: -16vw;
-    width: 100%;
+    top: 16.5vw;
+    width: 90vw;
+    margin-top: -24vw;
+    animation: floatYShadow 4s ease-in-out infinite;
   }
 }
 
@@ -170,7 +212,7 @@
     opacity: 0.5;
   }
   50% {
-    transform: translateY(-30px);
+    transform: translateY(-1.5vw);
     opacity: 1;
   }
   100% {
@@ -184,7 +226,34 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(30px);
+    transform: translateY(1.5vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatYShadowMobile {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-4.5vw);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+}
+
+@keyframes floatYRingMobile {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4.5vw);
   }
   100% {
     transform: translateY(0);

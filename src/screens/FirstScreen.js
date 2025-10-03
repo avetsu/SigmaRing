@@ -6,6 +6,7 @@ import outlineSmart from "../photos/SMART.png";
 import SmallGreen from "../photos/SmallGreen.png";
 import BigGreen from "../photos/BigGreen.png";
 import { useState, useEffect } from "react";
+import { useT } from "../features/UseT";
 
 function useWindowSize() {
   const [size, setSize] = useState({
@@ -35,44 +36,15 @@ const Background = () => {
 
 function FirstScreen() {
   const { w, h } = useWindowSize();
+  const t = useT();
   return (
     <div className="FirstScreen">
       <Background />
       <div className="FirstScreenContentContainer">
         <div className="FirstScreenContent Sigma">Sigma</div>
-        <div className="FirstScreenContent Ring">Ring</div>
-        <div
-          className="multiply hide-on-mobile"
-          style={{
-            fontWeight: 700,
-            fontSize: "364px",
-            marginLeft: "-30px",
-            marginTop: "0px",
-            letterSpacing: "-50.96px",
-            color: "rgba(255, 255, 255, 0.59)",
-            paddingRight: "70px",
-            backgroundColor: "rgba(255, 255, 255, 0.59)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            lineHeight: "300px",
-          }}
-        >
-          BE
-        </div>
-        <div className="FirstScreenContent Tech">
-          Technologies that care about you!
-        </div>
-        {w > 768 && (
-          <Slider
-            value="Explore"
-            styles={{
-              position: "relative",
-              zIndex: 1,
-              marginLeft: "0px",
-              marginTop: "67px",
-            }}
-          />
-        )}
+        <div className="FirstScreenContent Ring1">Ring</div>
+        <div className="multiply hide-on-mobile Be">BE</div>
+        <div className="FirstScreenContent Tech">{t.s1title1}</div>
       </div>
       <div className="OverflowingText">
         <div
@@ -90,7 +62,7 @@ function FirstScreen() {
           <img
             src={outlineSmart}
             alt="Transparent Smart"
-            style={{ width: "1055.11px" }}
+            style={{ width: `${w / 1.8}px` }}
           />
         </div>
         <div
@@ -98,32 +70,29 @@ function FirstScreen() {
           style={{
             alignItems: "center",
             justifyContent: "center",
-            marginTop: "20px",
-            fontWeight: 700,
-            fontSize: "364px",
-            letterSpacing: "-50.96px",
-            color: "rgba(255, 255, 255, 0)",
-            WebkitTextStroke: "1px white",
+            marginTop: `${w / 96}px`,
           }}
         >
           <img
             src={outlineSmart}
             alt="Transparent Smart"
-            style={{ width: "1055.11px" }}
+            style={{ width: `${w / 1.8}px` }}
           />
         </div>
         <div
           className="multiply hide-on-mobile"
           style={{
+            textAlign: "start",
+            width: "100%",
             fontWeight: 700,
-            fontSize: "364px",
-            marginLeft: "-10px",
-            letterSpacing: "-50.96px",
+            fontSize: `${w / 5.208}px`,
+            letterSpacing: `${w / -37.6}px`,
             color: "rgba(255, 255, 255, 0.59)",
             backgroundColor: "rgba(255, 255, 255, 0.59)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            lineHeight: "300px",
+            lineHeight: `${w / 6.4}px`,
+            marginLeft: `-${w / 88}px`,
           }}
         >
           SMART
@@ -133,7 +102,7 @@ function FirstScreen() {
           style={{
             alignItems: "center",
             justifyContent: "center",
-            marginTop: "10px",
+            marginTop: `${w / 192}px`,
             fontWeight: 700,
             fontSize: "364px",
             letterSpacing: "-50.96px",
@@ -144,30 +113,15 @@ function FirstScreen() {
           <img
             src={outlineSmart}
             alt="Transparent Smart"
-            style={{ width: "1055.11px" }}
+            style={{ width: `${w / 1.8}px` }}
           />
         </div>
-        {/* <div
-          className="multiply"
-          style={{
-            fontWeight: 700,
-            fontSize: "364px",
-            marginLeft: "-30px",
-            marginTop: "-170px",
-            letterSpacing: "-50.96px",
-            color: "rgba(255, 255, 255, 0)",
-            paddingRight: "70px",
-            WebkitTextStroke: "1px white",
-          }}
-        >
-          SMART
-        </div> */}
         <div
           className="multiply hide-on-mobile"
           style={{
             alignItems: "center",
             justifyContent: "center",
-            marginTop: "20px",
+            marginTop: `${w / 96}px`,
             fontWeight: 700,
             fontSize: "364px",
             letterSpacing: "-50.96px",
@@ -178,52 +132,44 @@ function FirstScreen() {
           <img
             src={outlineSmart}
             alt="Transparent Smart"
-            style={{ width: "1055.11px" }}
+            style={{ width: `${w / 1.8}px` }}
           />
         </div>
-        <div>
-          <div class="ring-wrapper">
-            <img className="ring" src={ringimg} alt="Ring" />
-          </div>
-          <img className="shadow" src={ringshadow} alt="shadow" />
+        <div
+          className="Anim-Ring"
+          style={{
+            zIndex: 4,
+          }}
+        >
+          <div className="ring-wrapper">
+            <img
+              className="ringimg"
+              src={ringimg}
+              alt="Ring"
+              style={{ position: "relative" }}
+            />
+          </div>{" "}
+          <img
+            className="shadow"
+            src={ringshadow}
+            alt="shadow"
+            style={{ position: "relative" }}
+          />
         </div>
       </div>
       <div className="FirstScreenCorner">
         {w > 768 ? (
           <>
-            <div style={{ fontSize: "16px", fontWeight: 400 }}>
-              Unlock peak performance by mastering your health, mindset and
-              daily habits with SIGMA.
-            </div>
-            <div
-              style={{
-                marginTop: "5px",
-                fontSize: "10px",
-                fontWeight: 400,
-                opacity: 0.5,
-                width: "585px",
-                textAlign: "start",
-              }}
-            >
-              A high-tech smart ring designed for high achievers, elite
-              entrepreneurs, and visionaries who manage life and business at
-              maximum speed. Combining cutting-edge innovation, ,
-              blockchain-backed data security, cryptocurrency integration and
-              seamless AI optimization, SIGMA sets a new standard for
-              performance where innovation meets financial empowerment
+            <div style={{ fontSize: `${w / 90}px`, fontWeight: 400 }}>
+              {t.s1title2}
             </div>
           </>
         ) : (
-          <Slider
-            value="Explore"
-            styles={{
-              position: "absolute",
-              zIndex: 1,
-              marginLeft: "0px",
-              marginTop: "-20vh",
-            }}
-            stylesvalue={{ padding: "0 15vw" }}
-          />
+          <>
+            <div style={{ fontSize: `${w / 40}px`, fontWeight: 400 }}>
+              {t.s1title2}
+            </div>
+          </>
         )}
       </div>
     </div>

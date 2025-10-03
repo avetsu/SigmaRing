@@ -3,11 +3,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 100%;
+  height: 46vw;
   width: 100%;
   background-color: #000000;
   color: black;
   font-family: "Lexend", sans-serif;
+  margin-top: -1px;
 }
 
 .FifthScreenContainer {
@@ -15,61 +16,61 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border-radius: 25px;
-  width: calc(100% - 40px);
-  height: 800px;
-  margin: 0 19px;
+  border-radius: 1vw;
+  width: calc(100vw - 40px);
+  height: 41.5vw;
+  margin: 0 1vw;
   background: linear-gradient(to right, #aeaeae, #ffffff);
 }
 
 .FifthScreenContent {
-  margin-right: -100px;
-  margin-left: 100px;
+  margin-right: -5vw;
+  margin-left: 5vw;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
   width: 100%;
   height: 100%;
-  font-size: 40px;
+  font-size: 2vw;
   font-weight: 200;
 }
 
 .FifthScreenContentRow {
   display: flex;
   flex-direction: row;
-  margin-bottom: -30px;
-  margin-left: 10px;
+  margin-bottom: -1.5vw;
+  margin-left: 0.5vw;
 }
 
 .Sigma5 {
-  font-size: 40px;
+  font-size: 2vw;
   font-weight: 200;
-  margin-right: 30px;
+  margin-right: 1.5vw;
 }
 
 .Limited {
-  font-size: 24.15px;
+  font-size: 1vw;
   font-weight: 300;
-  border-radius: 40px;
+  border-radius: 2vw;
   background-color: #8a0dff;
   color: white;
-  padding: 10px 20px;
+  padding: 0.5vw 1vw;
 }
 
 .Ring {
-  font-size: 140px;
+  font-size: 7vw;
   font-weight: 700;
-  padding-left: 10px;
+  padding-left: 0.5vw;
 }
 
 .Quantity {
-  font-size: 22px;
+  font-size: 1vw;
   font-weight: 300;
-  margin-right: 30px;
-  margin-left: 10px;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-right: 1.5vw;
+  margin-left: 0.5vw;
+  margin-bottom: 2.5vw;
+  margin-top: 2.5vw;
 }
 
 .Sum {
@@ -77,40 +78,42 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-left: 10px;
-  margin-top: 50px;
+  margin-left: 0.5vw;
+  margin-top: 2.5vw;
 }
 
 .Dollars {
-  font-size: 50px;
+  font-size: 2.5vw;
   font-weight: 700;
 }
 
 .DEXNET {
-  font-size: 12px;
+  font-size: 0.5vw;
   font-weight: 300;
-  width: 150px;
-  margin-left: 10px;
-  margin-bottom: -10px;
+  width: 7vw;
+  margin-left: 0.5vw;
+  margin-bottom: -0.5vw;
 }
 
 .PromoCards {
   display: flex;
   flex-direction: row;
-  margin-left: 10px;
+  margin-left: 0.5vw;
 }
 
 @media (max-width: 768px) {
   .FifthScreen {
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     margin-top: -1px;
+    height: 250vw;
   }
   .FifthScreenContainer {
     margin: 0 2vw;
     justify-content: center;
     height: auto;
     width: 94vw;
+    border-radius: 4vw;
   }
   .FifthScreenContent {
     margin-right: 0vw;
@@ -129,34 +132,37 @@
   .FifthScreenContentRow {
     display: flex;
     flex-direction: row;
-    margin-bottom: -30px;
-    margin-left: 10px;
+    margin-bottom: -6vw;
+    margin-left: 3vw;
   }
   .Sigma5 {
-    font-size: 25.03px;
-    margin-left: -2vw;
-  }
-  .Ring {
-    font-size: 87px;
+    font-size: 7vw;
+    margin-left: 0;
   }
   .Limited {
-    font-size: 15.11px;
-    padding: 1vh 2vh;
-    margin-bottom: 1vh;
+    font-size: 4vw;
+    padding: 2vw 4vw;
+    margin-bottom: 1vw;
+    border-radius: 11vw;
+  }
+  .Ring {
+    font-size: 25vw;
+    padding-left: 1vw;
   }
   .Quantity {
-    font-size: 12px;
+    font-size: 4vw;
     margin: 0;
-    margin-top: -10vh;
+    margin-top: -33vw;
   }
   .Dollars {
-    font-size: 31.28px;
-    margin-top: -4vh;
+    font-size: 11vw;
+    margin-top: 0vw;
   }
   .DEXNET {
-    font-size: 7.5px;
-    margin-bottom: 1vh;
-    width: 20vw;
+    font-size: 2vw;
+    margin-bottom: 2vw;
+    width: 22vw;
+    text-align: center;
   }
   .Sum {
     width: 100%;
